@@ -370,6 +370,7 @@ FixedPointSolve::solveStep(Real & begin_norm,
                                            : std::numeric_limits<Real>::max());
 
   _executioner.preSolve();
+
   _problem.execTransfers(EXEC_TIMESTEP_BEGIN);
 
   if (_fixed_point_it == 0)

@@ -45,7 +45,11 @@ public:
   /**
    * Finds the smallest dt from among any of the apps.
    */
-  Real computeDT();
+  Real computeDT_min();
+  /**
+   * Finds the maximum dt from among any of the apps.
+   */
+  Real computeDT_max(bool isnext);
 
 private:
   /**

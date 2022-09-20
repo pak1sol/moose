@@ -34,7 +34,7 @@ public:
 
   virtual void preExecute();
   virtual void preSolve() {}
-  virtual void postSolve() {}
+  virtual void postSolve();
   virtual void postExecute() {}
   virtual void preStep() {}
   virtual void postStep() {}
@@ -61,6 +61,11 @@ public:
   virtual void step();
 
   /**
+   * Predict a next time step in the current time step
+   */
+  void computeNextStep(bool called_postSolve);
+
+  /**
    * This gets called when time step is accepted
    */
   virtual void acceptStep();
@@ -83,6 +88,11 @@ public:
    * Get the current_dt
    */
   Real getCurrentDT() { return _current_dt; }
+
+  /**
+   * Get the predicteed next_dt (constrained by TimeStepper, but unconstrained by Transient executioner)
+   */
+  Real getNextDT() { return _next_dt; }
 
   virtual void forceTimeStep(Real dt);
 
@@ -160,4 +170,5 @@ protected:
 private:
   /// Size of the current time step as computed by the Stepper.  Note that the actual dt that was taken might be smaller if the Executioner constrained it.
   Real & _current_dt;
+  Real & _next_dt;
 };

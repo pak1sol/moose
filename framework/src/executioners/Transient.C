@@ -118,12 +118,17 @@ Transient::validParams()
                         1.0e-12,
                         "the tolerance setting for final timestep size and sync times");
 
-  params.addParam<bool>("use_multiapp_dt",
+  params.addParam<bool>("min_multiapp_dt",
                         false,
-                        "If true then the dt for the simulation will be "
-                        "chosen by the MultiApps.  If false (the "
-                        "default) then the minimum over the master dt "
-                        "and the MultiApps is used");
+                        "If true, the dt for the simulation will be chosen by the minimum time step values among MultiApps. If false (the default), the minimum over the master dt and the MultiApps is used.");
+
+  params.addParam<bool>("max_multiapp_dt",
+                        false,
+                        "If true, the dt for the simulation will be chosen by the maximum time step values among MultiApps at the previous time step. If false (the default), the dt for the simulation is determined by min_multiapp_dt. This option has priority over min_multiapp_dt.");
+
+  params.addParam<bool>("max_multiapp_next_dt",
+                        false,
+                        "If true, the dt for the simulation will be chosen by the maximum time step values among MultiApps for the current time step. If false (the default), the dt for the simulation is determined by min_multiapp_dt. This option has priority over min_multiapp_dt.");
 
   params.addParam<bool>("check_aux",
                         false,
@@ -135,7 +140,7 @@ Transient::validParams()
       "Steady State Detection");
 
   params.addParamNamesToGroup("start_time dtmin dtmax n_startup_steps trans_ss_check ss_check_tol "
-                              "ss_tmin abort_on_solve_fail timestep_tolerance use_multiapp_dt",
+                              "ss_tmin abort_on_solve_fail timestep_tolerance min_multiapp_dt max_multiapp_dt max_multiapp_next_dt",
                               "Advanced");
 
   params.addParamNamesToGroup("time_periods time_period_starts time_period_ends", "Time Periods");
@@ -175,7 +180,9 @@ Transient::Transient(const InputParameters & parameters)
     _start_time(getParam<Real>("start_time")),
     _timestep_tolerance(getParam<Real>("timestep_tolerance")),
     _target_time(declareRecoverableData<Real>("target_time", -std::numeric_limits<Real>::max())),
-    _use_multiapp_dt(getParam<bool>("use_multiapp_dt")),
+    _min_multiapp_dt(getParam<bool>("min_multiapp_dt")),
+    _max_multiapp_dt(getParam<bool>("max_multiapp_dt")),
+    _max_multiapp_next_dt(getParam<bool>("max_multiapp_next_dt")),
     _solution_change_norm(declareRecoverableData<Real>("solution_change_norm", 0.0)),
     _sln_diff(_check_aux ? _aux.addVector("sln_diff", false, PARALLEL)
                          : _nl.addVector("sln_diff", false, PARALLEL)),
@@ -217,6 +224,9 @@ Transient::Transient(const InputParameters & parameters)
     if (_num_steps == 0) // Always do one step in the first half
       _num_steps = 1;
   }
+
+  if (_max_multiapp_dt && _max_multiapp_next_dt)
+    mooseError("Both max_multiapp_dt and max_multiapp_dt cannot be true.");
 }
 
 void
@@ -376,6 +386,12 @@ Transient::computeDT()
 }
 
 void
+Transient::computeNextDT(bool called_postSolve)
+{
+  _time_stepper->computeNextStep(called_postSolve);
+}
+
+void
 Transient::incrementStepOrReject()
 {
   if (lastSolveConverged())
@@ -416,8 +432,6 @@ Transient::incrementStepOrReject()
        * the correct time step information
        */
       _problem.incrementMultiAppTStep(EXEC_MULTIAPP_FIXED_POINT_BEGIN);
-      _problem.incrementMultiAppTStep(EXEC_TIMESTEP_BEGIN);
-      _problem.incrementMultiAppTStep(EXEC_TIMESTEP_END);
       _problem.incrementMultiAppTStep(EXEC_MULTIAPP_FIXED_POINT_END);
     }
   }
@@ -543,6 +557,20 @@ Transient::computeConstrainedDT()
   // Allow the time stepper to limit the time step
   _at_sync_point = _time_stepper->constrainStep(dt_cur);
 
+  if (_max_multiapp_dt || _max_multiapp_next_dt)
+  {
+    bool isnext = false;
+    if (_max_multiapp_next_dt)
+      isnext = true;
+
+    Real multi_app_dt1 = _problem.computeMultiAppsDT_max(EXEC_TIMESTEP_BEGIN, isnext);
+    Real multi_app_dt2 = _problem.computeMultiAppsDT_max(EXEC_TIMESTEP_END, isnext);
+    dt_cur = std::max(multi_app_dt1, multi_app_dt2);
+    _at_sync_point = false;
+    diag << "Forcing dt to maximum time step among MultiApps: " << std::setw(9) << std::setprecision(6)
+         << std::setfill('0') << std::showpoint << std::left << dt_cur << std::endl;
+  }
+
   // Don't let time go beyond next time interval output if specified
   if ((_time_interval) && (_time + dt_cur + _timestep_tolerance >= _next_interval_output_time))
   {
@@ -556,16 +584,28 @@ Transient::computeConstrainedDT()
   }
 
   // If a target time is set and the current dt would exceed it, limit dt to match the target
-  if (_target_time > -std::numeric_limits<Real>::max() + _timestep_tolerance &&
-      _time + dt_cur + _timestep_tolerance >= _target_time)
+  if (_target_time > -std::numeric_limits<Real>::max() + _timestep_tolerance)
   {
-    dt_cur = _target_time - _time;
-    _at_sync_point = true;
+    if (_time + dt_cur + _timestep_tolerance >= _target_time)
+    {
+      dt_cur = _target_time - _time;
+      _at_sync_point = true;
 
-    diag << "Limiting dt for target time: " << std::setw(9) << std::setprecision(6)
-         << std::setfill('0') << std::showpoint << std::left << _next_interval_output_time
-         << " dt: " << std::setw(9) << std::setprecision(6) << std::setfill('0') << std::showpoint
-         << std::left << dt_cur << std::endl;
+      diag << "Limiting dt for target time: " << std::setw(9) << std::setprecision(6)
+          << std::setfill('0') << std::showpoint << std::left << _next_interval_output_time
+          << " dt: " << std::setw(9) << std::setprecision(6) << std::setfill('0') << std::showpoint
+          << std::left << dt_cur << std::endl;
+    }
+    else if ((_time + dt_cur + _dtmin) > _target_time)
+    {
+      dt_cur = (_target_time - _time) / 2;
+      _at_sync_point = true;
+
+      diag << "Limiting dt not to close to target time to avoid too small dt at the next time step: " << std::setw(9) << std::setprecision(6)
+          << std::setfill('0') << std::showpoint << std::left << _next_interval_output_time
+          << " dt: " << std::setw(9) << std::setprecision(6) << std::setfill('0') << std::showpoint
+          << std::left << dt_cur << std::endl;
+    }
   }
 
   // Constrain by what the multi apps are doing
@@ -585,14 +625,17 @@ Transient::constrainDTFromMultiApp(Real & dt_cur,
                                    std::ostringstream & diag,
                                    const ExecFlagType & execute_on) const
 {
-  Real multi_app_dt = _problem.computeMultiAppsDT(execute_on);
-  if (_use_multiapp_dt || multi_app_dt < dt_cur)
+  if (!_max_multiapp_dt && !_max_multiapp_next_dt)
   {
-    dt_cur = multi_app_dt;
-    _at_sync_point = false;
-    diag << "Limiting dt for MultiApps on " << execute_on.name() << ": " << std::setw(9)
-         << std::setprecision(6) << std::setfill('0') << std::showpoint << std::left << dt_cur
-         << std::endl;
+    Real multi_app_dt = _problem.computeMultiAppsDT_min(execute_on);
+    if (_min_multiapp_dt || multi_app_dt < dt_cur)
+    {
+      dt_cur = multi_app_dt;
+      _at_sync_point = false;
+      diag << "Limiting dt for MultiApps on " << execute_on.name() << ": " << std::setw(9)
+          << std::setprecision(6) << std::setfill('0') << std::showpoint << std::left << dt_cur
+          << std::endl;
+    }
   }
 }
 
@@ -600,6 +643,12 @@ Real
 Transient::getDT()
 {
   return _time_stepper->getCurrentDT();
+}
+
+Real
+Transient::getNextDT()
+{
+  return _time_stepper->getNextDT();
 }
 
 bool

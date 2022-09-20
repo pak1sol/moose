@@ -17,16 +17,23 @@ TimestepSize::validParams()
 {
   InputParameters params = GeneralPostprocessor::validParams();
   params.addClassDescription("Reports the timestep size");
+  params.addParam<bool>("next_timestep", false, "Get the next (unconstrained) time step predicted by time stepper");
   return params;
 }
 
 TimestepSize::TimestepSize(const InputParameters & parameters)
-  : GeneralPostprocessor(parameters), _feproblem(dynamic_cast<FEProblemBase &>(_subproblem))
+  : GeneralPostprocessor(parameters), _feproblem(dynamic_cast<FEProblemBase &>(_subproblem)),
+    _isnextTstepper(getParam<bool>("next_timestep"))
 {
+  if (_isnextTstepper)
+    _timestepper = dynamic_cast<Transient *>(_app.getExecutioner())->getTimeStepper();
 }
 
 Real
 TimestepSize::getValue()
 {
-  return _feproblem.dt();
+  if (_isnextTstepper)
+    return _timestepper->getNextDT();
+  else
+    return _feproblem.dt();
 }

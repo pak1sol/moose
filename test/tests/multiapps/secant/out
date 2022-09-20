@@ -1,0 +1,2833 @@
+Framework Information:
+MOOSE Version:           git commit 8888f041c1 on 2022-06-03
+LibMesh Version:         
+PETSc Version:           3.16.5
+SLEPc Version:           3.16.2
+Current Time:            Sun Jun  5 20:19:08 2022
+Executable Timestamp:    Sun Jun  5 20:18:36 2022
+
+Parallelism:
+  Num Processors:          1
+  Num Threads:             1
+
+Mesh: 
+  Parallel Type:           replicated
+  Mesh Dimension:          2
+  Spatial Dimension:       2
+  Nodes:                   121
+  Elems:                   100
+  Num Subdomains:          1
+
+Nonlinear System:
+  Num DOFs:                121
+  Num Local DOFs:          121
+  Variables:               "u" 
+  Finite Element Types:    "LAGRANGE" 
+  Approximation Orders:    "FIRST" 
+
+Auxiliary System:
+  Num DOFs:                121
+  Num Local DOFs:          121
+  Variables:               "v" 
+  Finite Element Types:    "LAGRANGE" 
+  Approximation Orders:    "FIRST" 
+
+Execution Information:
+  Executioner:             Transient
+  TimeStepper:             IterationAdaptiveDT
+  Solver Mode:             Preconditioned JFNK
+  PETSc Preconditioner:    hypre boomeramg 
+
+[36msub0: [39mParallelism:
+[36msub0: [39m  Num Processors:          1
+[36msub0: [39m  Num Threads:             1
+[36msub0: [39m
+[36msub0: [39mMesh: 
+[36msub0: [39m  Parallel Type:           replicated
+[36msub0: [39m  Mesh Dimension:          2
+[36msub0: [39m  Spatial Dimension:       2
+[36msub0: [39m  Nodes:                   121
+[36msub0: [39m  Elems:                   100
+[36msub0: [39m  Num Subdomains:          1
+[36msub0: [39m
+[36msub0: [39mNonlinear System:
+[36msub0: [39m  Num DOFs:                121
+[36msub0: [39m  Num Local DOFs:          121
+[36msub0: [39m  Variables:               "v" 
+[36msub0: [39m  Finite Element Types:    "LAGRANGE" 
+[36msub0: [39m  Approximation Orders:    "FIRST" 
+[36msub0: [39m
+[36msub0: [39mAuxiliary System:
+[36msub0: [39m  Num DOFs:                121
+[36msub0: [39m  Num Local DOFs:          121
+[36msub0: [39m  Variables:               "u" 
+[36msub0: [39m  Finite Element Types:    "LAGRANGE" 
+[36msub0: [39m  Approximation Orders:    "FIRST" 
+[36msub0: [39m
+[36msub0: [39mExecution Information:
+[36msub0: [39m  Executioner:             Transient
+[36msub0: [39m  TimeStepper:             ConstantDT
+[36msub0: [39m  Solver Mode:             Preconditioned JFNK
+[36msub0: [39m  PETSc Preconditioner:    hypre boomeramg 
+[36msub0: [39m
+[36msub0: [39m
+[36msub0: [39mTime Step 0, time = 0
+[36msub0: [39m
+[36msub0: [39mPostprocessor Values:
+[36msub0: [39m+----------------+----------------+
+[36msub0: [39m| time           | vnorm          |
+[36msub0: [39m+----------------+----------------+
+[36msub0: [39m|   0.000000e+00 |   0.000000e+00 |
+[36msub0: [39m+----------------+----------------+
+[36msub0: [39m
+
+Time Step 0, time = 0
+
+Postprocessor Values:
++----------------+----------------+
+| time           | unorm          |
++----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |
++----------------+----------------+
+
+
+Time Step 1, time = 0.1, dt = 0.1
+[35mInitial fixed point residual norm: [39m3.316625e+00[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 1, time = 0.1, dt = 0.1
+[36msub0: [39m 0 Nonlinear |R| = [32m3.077070e+00[39m
+[36msub0: [39m      0 Linear |R| = [32m3.077070e+00[39m
+[36msub0: [39m      1 Linear |R| = [32m1.254953e-01[39m
+[36msub0: [39m      2 Linear |R| = [32m3.220643e-03[39m
+[36msub0: [39m      3 Linear |R| = [32m7.386617e-05[39m
+[36msub0: [39m      4 Linear |R| = [32m9.348568e-07[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m9.393545e-07[39m
+[36msub0: [39m      0 Linear |R| = [32m9.393545e-07[39m
+[36msub0: [39m      1 Linear |R| = [32m2.696353e-08[39m
+[36msub0: [39m      2 Linear |R| = [32m3.679086e-10[39m
+[36msub0: [39m      3 Linear |R| = [32m1.610775e-11[39m
+[36msub0: [39m      4 Linear |R| = [32m4.270319e-13[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m4.293009e-13[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.316979e+00[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m2.639598e-01[39m
+      0 Linear |R| = [32m2.639598e-01[39m
+      1 Linear |R| = [32m2.560728e-03[39m
+      2 Linear |R| = [32m1.441634e-05[39m
+      3 Linear |R| = [32m9.202816e-08[39m
+ 1 Nonlinear |R| = [32m9.238488e-08[39m
+      0 Linear |R| = [32m9.238488e-08[39m
+      1 Linear |R| = [32m6.489173e-10[39m
+      2 Linear |R| = [32m5.622122e-12[39m
+      3 Linear |R| = [32m3.553139e-14[39m
+ 2 Nonlinear |R| = [32m3.556575e-14[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m3.316625e+00[39m
+ 1 Secant initialization |R| = [31m3.316979e+00[39m
+[35mBeginning fixed point iteration 1[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 1, time = 0.1, dt = 0.1
+[36msub0: [39m 0 Nonlinear |R| = [32m1.497925e-02[39m
+[36msub0: [39m      0 Linear |R| = [32m1.497925e-02[39m
+[36msub0: [39m      1 Linear |R| = [32m1.078457e-03[39m
+[36msub0: [39m      2 Linear |R| = [32m3.077622e-05[39m
+[36msub0: [39m      3 Linear |R| = [32m7.231797e-07[39m
+[36msub0: [39m      4 Linear |R| = [32m1.071461e-08[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m1.072945e-08[39m
+[36msub0: [39m      0 Linear |R| = [32m1.072945e-08[39m
+[36msub0: [39m      1 Linear |R| = [32m3.350924e-10[39m
+[36msub0: [39m      2 Linear |R| = [32m4.432477e-12[39m
+[36msub0: [39m      3 Linear |R| = [32m1.090849e-13[39m
+[36msub0: [39m      4 Linear |R| = [32m4.993185e-15[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m5.094838e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m7.021519e-04[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m7.021519e-04[39m
+      0 Linear |R| = [32m7.021519e-04[39m
+      1 Linear |R| = [32m1.497155e-05[39m
+      2 Linear |R| = [32m2.515878e-08[39m
+      3 Linear |R| = [32m2.525138e-10[39m
+ 1 Nonlinear |R| = [32m2.527611e-10[39m
+      0 Linear |R| = [32m2.527611e-10[39m
+      1 Linear |R| = [32m2.538322e-12[39m
+      2 Linear |R| = [32m6.388756e-15[39m
+      3 Linear |R| = [32m4.081656e-17[39m
+ 2 Nonlinear |R| = [32m6.022702e-17[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m3.316625e+00[39m
+ 1 Secant initialization |R| = [31m3.316979e+00[39m
+ 2 Secant initialization |R| = [32m7.021519e-04[39m
+[35mBeginning fixed point iteration 2[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 1, time = 0.1, dt = 0.1
+[36msub0: [39m 0 Nonlinear |R| = [32m6.320732e-05[39m
+[36msub0: [39m      0 Linear |R| = [32m6.320732e-05[39m
+[36msub0: [39m      1 Linear |R| = [32m7.435546e-06[39m
+[36msub0: [39m      2 Linear |R| = [32m1.800937e-07[39m
+[36msub0: [39m      3 Linear |R| = [32m3.348642e-09[39m
+[36msub0: [39m      4 Linear |R| = [32m5.308052e-11[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m5.470246e-11[39m
+[36msub0: [39m      0 Linear |R| = [32m5.470246e-11[39m
+[36msub0: [39m      1 Linear |R| = [32m1.659540e-12[39m
+[36msub0: [39m      2 Linear |R| = [32m4.570547e-14[39m
+[36msub0: [39m      3 Linear |R| = [32m1.514099e-15[39m
+[36msub0: [39m      4 Linear |R| = [32m1.952645e-17[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m9.016343e-16[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m5.717347e-06[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m5.717347e-06[39m
+      0 Linear |R| = [32m5.717347e-06[39m
+      1 Linear |R| = [32m1.227652e-07[39m
+      2 Linear |R| = [32m2.135831e-10[39m
+      3 Linear |R| = [32m1.877257e-12[39m
+ 1 Nonlinear |R| = [32m1.875399e-12[39m
+      0 Linear |R| = [32m1.875399e-12[39m
+      1 Linear |R| = [32m1.764067e-14[39m
+      2 Linear |R| = [32m8.677696e-17[39m
+      3 Linear |R| = [32m2.697421e-19[39m
+ 2 Nonlinear |R| = [32m4.231668e-17[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m3.316625e+00[39m
+ 1 Secant initialization |R| = [31m3.316979e+00[39m
+ 2 Secant initialization |R| = [32m7.021519e-04[39m
+ 3 Secant step           |R| = [32m5.717347e-06[39m
+[35mBeginning fixed point iteration 3[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 1, time = 0.1, dt = 0.1
+[36msub0: [39m 0 Nonlinear |R| = [32m7.191030e-09[39m
+[36msub0: [39m      0 Linear |R| = [32m7.191030e-09[39m
+[36msub0: [39m      1 Linear |R| = [32m8.081007e-10[39m
+[36msub0: [39m      2 Linear |R| = [32m2.004451e-11[39m
+[36msub0: [39m      3 Linear |R| = [32m3.401267e-13[39m
+[36msub0: [39m      4 Linear |R| = [32m6.314021e-15[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m6.539923e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [31m5.792598e-06[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m5.792598e-06[39m
+      0 Linear |R| = [32m5.792598e-06[39m
+      1 Linear |R| = [32m1.243419e-07[39m
+      2 Linear |R| = [32m2.188790e-10[39m
+      3 Linear |R| = [32m1.919264e-12[39m
+ 1 Nonlinear |R| = [32m1.919605e-12[39m
+      0 Linear |R| = [32m1.919605e-12[39m
+      1 Linear |R| = [32m1.822211e-14[39m
+      2 Linear |R| = [32m8.805177e-17[39m
+      3 Linear |R| = [32m2.780704e-19[39m
+ 2 Nonlinear |R| = [32m2.546191e-17[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m3.316625e+00[39m
+ 1 Secant initialization |R| = [31m3.316979e+00[39m
+ 2 Secant initialization |R| = [32m7.021519e-04[39m
+ 3 Secant step           |R| = [32m5.717347e-06[39m
+ 4 Secant step           |R| = [32m5.792598e-06[39m
+[35mBeginning fixed point iteration 4[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 1, time = 0.1, dt = 0.1
+[36msub0: [39m 0 Nonlinear |R| = [32m5.325738e-07[39m
+[36msub0: [39m      0 Linear |R| = [32m5.325738e-07[39m
+[36msub0: [39m      1 Linear |R| = [32m6.305162e-08[39m
+[36msub0: [39m      2 Linear |R| = [32m1.431134e-09[39m
+[36msub0: [39m      3 Linear |R| = [32m2.736169e-11[39m
+[36msub0: [39m      4 Linear |R| = [32m4.438186e-13[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m4.831695e-13[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.513404e-07[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m1.513404e-07[39m
+      0 Linear |R| = [32m1.513404e-07[39m
+      1 Linear |R| = [32m1.112228e-09[39m
+      2 Linear |R| = [32m6.544831e-12[39m
+      3 Linear |R| = [32m4.655067e-14[39m
+ 1 Nonlinear |R| = [32m4.651661e-14[39m
+      0 Linear |R| = [32m4.651661e-14[39m
+      1 Linear |R| = [32m3.932629e-16[39m
+      2 Linear |R| = [32m2.995861e-18[39m
+      3 Linear |R| = [32m1.817154e-20[39m
+ 2 Nonlinear |R| = [32m4.315506e-17[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m3.316625e+00[39m
+ 1 Secant initialization |R| = [31m3.316979e+00[39m
+ 2 Secant initialization |R| = [32m7.021519e-04[39m
+ 3 Secant step           |R| = [32m5.717347e-06[39m
+ 4 Secant step           |R| = [32m5.792598e-06[39m
+ 5 Secant step           |R| = [32m1.513404e-07[39m
+[35mBeginning fixed point iteration 5[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 1, time = 0.1, dt = 0.1
+[36msub0: [39m 0 Nonlinear |R| = [32m5.132641e-09[39m
+[36msub0: [39m      0 Linear |R| = [32m5.132641e-09[39m
+[36msub0: [39m      1 Linear |R| = [32m2.677436e-10[39m
+[36msub0: [39m      2 Linear |R| = [32m6.776134e-12[39m
+[36msub0: [39m      3 Linear |R| = [32m1.909336e-13[39m
+[36msub0: [39m      4 Linear |R| = [32m3.211768e-15[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m3.301081e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.094193e-09[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m1.094193e-09[39m
+      0 Linear |R| = [32m1.094193e-09[39m
+      1 Linear |R| = [32m7.215788e-12[39m
+      2 Linear |R| = [32m3.194204e-14[39m
+      3 Linear |R| = [32m2.393043e-16[39m
+ 1 Nonlinear |R| = [32m2.379059e-16[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m3.316625e+00[39m
+ 1 Secant initialization |R| = [31m3.316979e+00[39m
+ 2 Secant initialization |R| = [32m7.021519e-04[39m
+ 3 Secant step           |R| = [32m5.717347e-06[39m
+ 4 Secant step           |R| = [32m5.792598e-06[39m
+ 5 Secant step           |R| = [32m1.513404e-07[39m
+ 6 Secant step           |R| = [32m1.094193e-09[39m
+Fixed point convergence reason: CONVERGED_RELATIVE
+
+Postprocessor Values:
++----------------+----------------+
+| time           | unorm          |
++----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |
+|   1.000000e-01 |   2.441319e-01 |
++----------------+----------------+
+
+[36msub0: [39m
+[36msub0: [39mPostprocessor Values:
+[36msub0: [39m+----------------+----------------+
+[36msub0: [39m| time           | vnorm          |
+[36msub0: [39m+----------------+----------------+
+[36msub0: [39m|   0.000000e+00 |   0.000000e+00 |
+[36msub0: [39m|   1.000000e-01 |   5.482190e-01 |
+[36msub0: [39m+----------------+----------------+
+[36msub0: [39m
+ NOT!!!!!!!!!!!!!! _cutback_occurred 
+BaseAdaptiveDT::computeDT()::_adaptive_timestepping 1
+else if (_adaptive_timestepping)
+_allowToShrink 1
+_allowToGrow 1
+_nl_its 1 growth_nl_its 4
+_l_its 3 growth_l_its 100
+
+Time Step 2, time = 0.22, dt = 0.12
+[35mInitial fixed point residual norm: [39m1.501609e-01[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 2, time = 0.22, dt = 0.12
+[36msub0: [39m 0 Nonlinear |R| = [32m4.902342e-02[39m
+[36msub0: [39m      0 Linear |R| = [32m4.902342e-02[39m
+[36msub0: [39m      1 Linear |R| = [32m5.218250e-03[39m
+[36msub0: [39m      2 Linear |R| = [32m6.468911e-05[39m
+[36msub0: [39m      3 Linear |R| = [32m1.372424e-06[39m
+[36msub0: [39m      4 Linear |R| = [32m2.297848e-08[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m2.362457e-08[39m
+[36msub0: [39m      0 Linear |R| = [32m2.362457e-08[39m
+[36msub0: [39m      1 Linear |R| = [32m8.907210e-10[39m
+[36msub0: [39m      2 Linear |R| = [32m1.442334e-11[39m
+[36msub0: [39m      3 Linear |R| = [32m5.784295e-13[39m
+[36msub0: [39m      4 Linear |R| = [32m1.696497e-14[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m1.725750e-14[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.519845e-01[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m1.519845e-01[39m
+      0 Linear |R| = [32m1.519845e-01[39m
+      1 Linear |R| = [32m2.615049e-03[39m
+      2 Linear |R| = [32m1.211917e-05[39m
+      3 Linear |R| = [32m9.090173e-08[39m
+ 1 Nonlinear |R| = [32m9.105230e-08[39m
+      0 Linear |R| = [32m9.105230e-08[39m
+      1 Linear |R| = [32m8.720097e-10[39m
+      2 Linear |R| = [32m7.787782e-12[39m
+      3 Linear |R| = [32m5.125096e-14[39m
+ 2 Nonlinear |R| = [32m5.137111e-14[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m1.501609e-01[39m
+ 1 Secant initialization |R| = [31m1.519845e-01[39m
+[35mBeginning fixed point iteration 1[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 2, time = 0.22, dt = 0.12
+[36msub0: [39m 0 Nonlinear |R| = [32m1.054209e-02[39m
+[36msub0: [39m      0 Linear |R| = [32m1.054209e-02[39m
+[36msub0: [39m      1 Linear |R| = [32m1.106833e-03[39m
+[36msub0: [39m      2 Linear |R| = [32m3.114412e-05[39m
+[36msub0: [39m      3 Linear |R| = [32m6.183669e-07[39m
+[36msub0: [39m      4 Linear |R| = [32m9.167602e-09[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m9.275070e-09[39m
+[36msub0: [39m      0 Linear |R| = [32m9.275070e-09[39m
+[36msub0: [39m      1 Linear |R| = [32m2.638041e-10[39m
+[36msub0: [39m      2 Linear |R| = [32m3.472625e-12[39m
+[36msub0: [39m      3 Linear |R| = [32m6.716914e-14[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m6.721409e-14[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m7.985951e-04[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m7.985951e-04[39m
+      0 Linear |R| = [32m7.985951e-04[39m
+      1 Linear |R| = [32m2.018757e-05[39m
+      2 Linear |R| = [32m4.131005e-08[39m
+      3 Linear |R| = [32m4.648928e-10[39m
+ 1 Nonlinear |R| = [32m4.655634e-10[39m
+      0 Linear |R| = [32m4.655634e-10[39m
+      1 Linear |R| = [32m5.476555e-12[39m
+      2 Linear |R| = [32m2.545095e-14[39m
+      3 Linear |R| = [32m1.187094e-16[39m
+ 2 Nonlinear |R| = [32m1.339339e-16[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m1.501609e-01[39m
+ 1 Secant initialization |R| = [31m1.519845e-01[39m
+ 2 Secant initialization |R| = [32m7.985951e-04[39m
+[35mBeginning fixed point iteration 2[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 2, time = 0.22, dt = 0.12
+[36msub0: [39m 0 Nonlinear |R| = [32m8.527508e-05[39m
+[36msub0: [39m      0 Linear |R| = [32m8.527508e-05[39m
+[36msub0: [39m      1 Linear |R| = [32m1.018347e-05[39m
+[36msub0: [39m      2 Linear |R| = [32m2.431154e-07[39m
+[36msub0: [39m      3 Linear |R| = [32m4.545713e-09[39m
+[36msub0: [39m      4 Linear |R| = [32m7.307293e-11[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m7.350890e-11[39m
+[36msub0: [39m      0 Linear |R| = [32m7.350890e-11[39m
+[36msub0: [39m      1 Linear |R| = [32m2.262736e-12[39m
+[36msub0: [39m      2 Linear |R| = [32m6.287626e-14[39m
+[36msub0: [39m      3 Linear |R| = [32m2.087395e-15[39m
+[36msub0: [39m      4 Linear |R| = [32m2.881977e-17[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m1.007303e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m7.877610e-06[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m7.877610e-06[39m
+      0 Linear |R| = [32m7.877610e-06[39m
+      1 Linear |R| = [32m1.994854e-07[39m
+      2 Linear |R| = [32m4.380945e-10[39m
+      3 Linear |R| = [32m4.637944e-12[39m
+ 1 Nonlinear |R| = [32m4.645334e-12[39m
+      0 Linear |R| = [32m4.645334e-12[39m
+      1 Linear |R| = [32m5.249192e-14[39m
+      2 Linear |R| = [32m2.858879e-16[39m
+      3 Linear |R| = [32m1.245646e-18[39m
+ 2 Nonlinear |R| = [32m5.149401e-17[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m1.501609e-01[39m
+ 1 Secant initialization |R| = [31m1.519845e-01[39m
+ 2 Secant initialization |R| = [32m7.985951e-04[39m
+ 3 Secant step           |R| = [32m7.877610e-06[39m
+[35mBeginning fixed point iteration 3[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 2, time = 0.22, dt = 0.12
+[36msub0: [39m 0 Nonlinear |R| = [32m1.060522e-08[39m
+[36msub0: [39m      0 Linear |R| = [32m1.060522e-08[39m
+[36msub0: [39m      1 Linear |R| = [32m1.234692e-09[39m
+[36msub0: [39m      2 Linear |R| = [32m2.714326e-11[39m
+[36msub0: [39m      3 Linear |R| = [32m5.141953e-13[39m
+[36msub0: [39m      4 Linear |R| = [32m9.003415e-15[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m9.277447e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [31m7.972494e-06[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m7.972494e-06[39m
+      0 Linear |R| = [32m7.972494e-06[39m
+      1 Linear |R| = [32m2.018355e-07[39m
+      2 Linear |R| = [32m4.471050e-10[39m
+      3 Linear |R| = [32m4.711175e-12[39m
+ 1 Nonlinear |R| = [32m4.717027e-12[39m
+      0 Linear |R| = [32m4.717027e-12[39m
+      1 Linear |R| = [32m5.323952e-14[39m
+      2 Linear |R| = [32m2.928412e-16[39m
+      3 Linear |R| = [32m1.277240e-18[39m
+ 2 Nonlinear |R| = [32m5.850514e-17[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m1.501609e-01[39m
+ 1 Secant initialization |R| = [31m1.519845e-01[39m
+ 2 Secant initialization |R| = [32m7.985951e-04[39m
+ 3 Secant step           |R| = [32m7.877610e-06[39m
+ 4 Secant step           |R| = [32m7.972494e-06[39m
+[35mBeginning fixed point iteration 4[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 2, time = 0.22, dt = 0.12
+[36msub0: [39m 0 Nonlinear |R| = [32m8.645988e-07[39m
+[36msub0: [39m      0 Linear |R| = [32m8.645988e-07[39m
+[36msub0: [39m      1 Linear |R| = [32m1.036306e-07[39m
+[36msub0: [39m      2 Linear |R| = [32m2.356934e-09[39m
+[36msub0: [39m      3 Linear |R| = [32m4.523284e-11[39m
+[36msub0: [39m      4 Linear |R| = [32m7.349425e-13[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m7.652232e-13[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.131486e-07[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m1.131486e-07[39m
+      0 Linear |R| = [32m1.131486e-07[39m
+      1 Linear |R| = [32m1.293877e-09[39m
+      2 Linear |R| = [32m7.739112e-12[39m
+      3 Linear |R| = [32m5.957006e-14[39m
+ 1 Nonlinear |R| = [32m5.972600e-14[39m
+      0 Linear |R| = [32m5.972600e-14[39m
+      1 Linear |R| = [32m5.216644e-16[39m
+      2 Linear |R| = [32m4.719879e-18[39m
+      3 Linear |R| = [32m3.359190e-20[39m
+ 2 Nonlinear |R| = [32m4.498694e-17[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m1.501609e-01[39m
+ 1 Secant initialization |R| = [31m1.519845e-01[39m
+ 2 Secant initialization |R| = [32m7.985951e-04[39m
+ 3 Secant step           |R| = [32m7.877610e-06[39m
+ 4 Secant step           |R| = [32m7.972494e-06[39m
+ 5 Secant step           |R| = [32m1.131486e-07[39m
+[35mBeginning fixed point iteration 5[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 2, time = 0.22, dt = 0.12
+[36msub0: [39m 0 Nonlinear |R| = [32m5.482706e-09[39m
+[36msub0: [39m      0 Linear |R| = [32m5.482706e-09[39m
+[36msub0: [39m      1 Linear |R| = [32m3.079923e-10[39m
+[36msub0: [39m      2 Linear |R| = [32m6.038831e-12[39m
+[36msub0: [39m      3 Linear |R| = [32m2.024033e-13[39m
+[36msub0: [39m      4 Linear |R| = [32m4.108134e-15[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m4.282569e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.012575e-09[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m1.012575e-09[39m
+      0 Linear |R| = [32m1.012575e-09[39m
+      1 Linear |R| = [32m1.052942e-11[39m
+      2 Linear |R| = [32m5.891748e-14[39m
+      3 Linear |R| = [32m4.930044e-16[39m
+ 1 Nonlinear |R| = [32m4.957362e-16[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m1.501609e-01[39m
+ 1 Secant initialization |R| = [31m1.519845e-01[39m
+ 2 Secant initialization |R| = [32m7.985951e-04[39m
+ 3 Secant step           |R| = [32m7.877610e-06[39m
+ 4 Secant step           |R| = [32m7.972494e-06[39m
+ 5 Secant step           |R| = [32m1.131486e-07[39m
+ 6 Secant step           |R| = [32m1.012575e-09[39m
+Fixed point convergence reason: CONVERGED_RELATIVE
+
+Postprocessor Values:
++----------------+----------------+
+| time           | unorm          |
++----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |
+|   1.000000e-01 |   2.441319e-01 |
+|   2.200000e-01 |   3.244854e-01 |
++----------------+----------------+
+
+[36msub0: [39m
+[36msub0: [39mPostprocessor Values:
+[36msub0: [39m+----------------+----------------+
+[36msub0: [39m| time           | vnorm          |
+[36msub0: [39m+----------------+----------------+
+[36msub0: [39m|   0.000000e+00 |   0.000000e+00 |
+[36msub0: [39m|   1.000000e-01 |   5.482190e-01 |
+[36msub0: [39m|   2.200000e-01 |   5.868948e-01 |
+[36msub0: [39m+----------------+----------------+
+[36msub0: [39m
+ NOT!!!!!!!!!!!!!! _cutback_occurred 
+BaseAdaptiveDT::computeDT()::_adaptive_timestepping 1
+else if (_adaptive_timestepping)
+_allowToShrink 1
+_allowToGrow 1
+_nl_its 1 growth_nl_its 4
+_l_its 3 growth_l_its 100
+
+Time Step 3, time = 0.364, dt = 0.144
+[35mInitial fixed point residual norm: [39m8.846100e-02[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 3, time = 0.364, dt = 0.144
+[36msub0: [39m 0 Nonlinear |R| = [32m3.794214e-03[39m
+[36msub0: [39m      0 Linear |R| = [32m3.794214e-03[39m
+[36msub0: [39m      1 Linear |R| = [32m4.602355e-04[39m
+[36msub0: [39m      2 Linear |R| = [32m9.480735e-06[39m
+[36msub0: [39m      3 Linear |R| = [32m1.919665e-07[39m
+[36msub0: [39m      4 Linear |R| = [32m3.141612e-09[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m3.216319e-09[39m
+[36msub0: [39m      0 Linear |R| = [32m3.216319e-09[39m
+[36msub0: [39m      1 Linear |R| = [32m9.745113e-11[39m
+[36msub0: [39m      2 Linear |R| = [32m2.176890e-12[39m
+[36msub0: [39m      3 Linear |R| = [32m8.182966e-14[39m
+[36msub0: [39m      4 Linear |R| = [32m1.377453e-15[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m1.680787e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m8.874733e-02[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m8.874733e-02[39m
+      0 Linear |R| = [32m8.874733e-02[39m
+      1 Linear |R| = [32m2.355525e-03[39m
+      2 Linear |R| = [32m6.881160e-06[39m
+      3 Linear |R| = [32m6.538203e-08[39m
+ 1 Nonlinear |R| = [32m6.535032e-08[39m
+      0 Linear |R| = [32m6.535032e-08[39m
+      1 Linear |R| = [32m9.145556e-10[39m
+      2 Linear |R| = [32m5.830456e-12[39m
+      3 Linear |R| = [32m3.242285e-14[39m
+ 2 Nonlinear |R| = [32m3.230503e-14[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m8.846100e-02[39m
+ 1 Secant initialization |R| = [31m8.874733e-02[39m
+[35mBeginning fixed point iteration 1[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 3, time = 0.364, dt = 0.144
+[36msub0: [39m 0 Nonlinear |R| = [32m9.786277e-03[39m
+[36msub0: [39m      0 Linear |R| = [32m9.786277e-03[39m
+[36msub0: [39m      1 Linear |R| = [32m1.132011e-03[39m
+[36msub0: [39m      2 Linear |R| = [32m3.086162e-05[39m
+[36msub0: [39m      3 Linear |R| = [32m5.635413e-07[39m
+[36msub0: [39m      4 Linear |R| = [32m8.582199e-09[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m8.775045e-09[39m
+[36msub0: [39m      0 Linear |R| = [32m8.775045e-09[39m
+[36msub0: [39m      1 Linear |R| = [32m2.366207e-10[39m
+[36msub0: [39m      2 Linear |R| = [32m5.578272e-12[39m
+[36msub0: [39m      3 Linear |R| = [32m2.248273e-13[39m
+[36msub0: [39m      4 Linear |R| = [32m2.836807e-15[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m3.079510e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m8.580918e-04[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m8.580918e-04[39m
+      0 Linear |R| = [32m8.580918e-04[39m
+      1 Linear |R| = [32m2.494499e-05[39m
+      2 Linear |R| = [32m6.530651e-08[39m
+      3 Linear |R| = [32m8.123456e-10[39m
+ 1 Nonlinear |R| = [32m8.133959e-10[39m
+      0 Linear |R| = [32m8.133959e-10[39m
+      1 Linear |R| = [32m1.084279e-11[39m
+      2 Linear |R| = [32m6.310734e-14[39m
+      3 Linear |R| = [32m3.682298e-16[39m
+ 2 Nonlinear |R| = [32m3.744472e-16[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m8.846100e-02[39m
+ 1 Secant initialization |R| = [31m8.874733e-02[39m
+ 2 Secant initialization |R| = [32m8.580918e-04[39m
+[35mBeginning fixed point iteration 2[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 3, time = 0.364, dt = 0.144
+[36msub0: [39m 0 Nonlinear |R| = [32m1.078869e-04[39m
+[36msub0: [39m      0 Linear |R| = [32m1.078869e-04[39m
+[36msub0: [39m      1 Linear |R| = [32m1.303889e-05[39m
+[36msub0: [39m      2 Linear |R| = [32m3.081301e-07[39m
+[36msub0: [39m      3 Linear |R| = [32m5.807891e-09[39m
+[36msub0: [39m      4 Linear |R| = [32m9.397688e-11[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m9.502980e-11[39m
+[36msub0: [39m      0 Linear |R| = [32m9.502980e-11[39m
+[36msub0: [39m      1 Linear |R| = [32m2.905755e-12[39m
+[36msub0: [39m      2 Linear |R| = [32m8.325929e-14[39m
+[36msub0: [39m      3 Linear |R| = [32m2.719411e-15[39m
+[36msub0: [39m      4 Linear |R| = [32m3.876549e-17[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m1.088694e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.011823e-05[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m1.011823e-05[39m
+      0 Linear |R| = [32m1.011823e-05[39m
+      1 Linear |R| = [32m2.943752e-07[39m
+      2 Linear |R| = [32m8.076028e-10[39m
+      3 Linear |R| = [32m9.817791e-12[39m
+ 1 Nonlinear |R| = [32m9.853773e-12[39m
+      0 Linear |R| = [32m9.853773e-12[39m
+      1 Linear |R| = [32m1.282179e-13[39m
+      2 Linear |R| = [32m7.592916e-16[39m
+      3 Linear |R| = [32m4.565161e-18[39m
+ 2 Nonlinear |R| = [32m5.525901e-17[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m8.846100e-02[39m
+ 1 Secant initialization |R| = [31m8.874733e-02[39m
+ 2 Secant initialization |R| = [32m8.580918e-04[39m
+ 3 Secant step           |R| = [32m1.011823e-05[39m
+[35mBeginning fixed point iteration 3[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 3, time = 0.364, dt = 0.144
+[36msub0: [39m 0 Nonlinear |R| = [32m1.684987e-08[39m
+[36msub0: [39m      0 Linear |R| = [32m1.684987e-08[39m
+[36msub0: [39m      1 Linear |R| = [32m2.010966e-09[39m
+[36msub0: [39m      2 Linear |R| = [32m4.124605e-11[39m
+[36msub0: [39m      3 Linear |R| = [32m8.302586e-13[39m
+[36msub0: [39m      4 Linear |R| = [32m1.407861e-14[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m1.522963e-14[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [31m1.024757e-05[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m1.024757e-05[39m
+      0 Linear |R| = [32m1.024757e-05[39m
+      1 Linear |R| = [32m2.980874e-07[39m
+      2 Linear |R| = [32m8.222091e-10[39m
+      3 Linear |R| = [32m9.963616e-12[39m
+ 1 Nonlinear |R| = [32m9.945719e-12[39m
+      0 Linear |R| = [32m9.945719e-12[39m
+      1 Linear |R| = [32m1.292767e-13[39m
+      2 Linear |R| = [32m7.715272e-16[39m
+      3 Linear |R| = [32m4.601948e-18[39m
+ 2 Nonlinear |R| = [32m6.464900e-17[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m8.846100e-02[39m
+ 1 Secant initialization |R| = [31m8.874733e-02[39m
+ 2 Secant initialization |R| = [32m8.580918e-04[39m
+ 3 Secant step           |R| = [32m1.011823e-05[39m
+ 4 Secant step           |R| = [32m1.024757e-05[39m
+[35mBeginning fixed point iteration 4[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 3, time = 0.364, dt = 0.144
+[36msub0: [39m 0 Nonlinear |R| = [32m1.307194e-06[39m
+[36msub0: [39m      0 Linear |R| = [32m1.307194e-06[39m
+[36msub0: [39m      1 Linear |R| = [32m1.583278e-07[39m
+[36msub0: [39m      2 Linear |R| = [32m3.609866e-09[39m
+[36msub0: [39m      3 Linear |R| = [32m6.944778e-11[39m
+[36msub0: [39m      4 Linear |R| = [32m1.130002e-12[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m1.220153e-12[39m
+[36msub0: [39m      0 Linear |R| = [32m1.220153e-12[39m
+[36msub0: [39m      1 Linear |R| = [32m3.783465e-14[39m
+[36msub0: [39m      2 Linear |R| = [32m8.271861e-16[39m
+[36msub0: [39m      3 Linear |R| = [32m3.361838e-17[39m
+[36msub0: [39m      4 Linear |R| = [32m4.850573e-19[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m8.744711e-16[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m6.959904e-08[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m6.959904e-08[39m
+      0 Linear |R| = [32m6.959904e-08[39m
+      1 Linear |R| = [32m1.229376e-09[39m
+      2 Linear |R| = [32m7.479746e-12[39m
+      3 Linear |R| = [32m5.876932e-14[39m
+ 1 Nonlinear |R| = [32m5.894415e-14[39m
+      0 Linear |R| = [32m5.894415e-14[39m
+      1 Linear |R| = [32m5.945222e-16[39m
+      2 Linear |R| = [32m5.579244e-18[39m
+      3 Linear |R| = [32m4.214248e-20[39m
+ 2 Nonlinear |R| = [32m5.624032e-17[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m8.846100e-02[39m
+ 1 Secant initialization |R| = [31m8.874733e-02[39m
+ 2 Secant initialization |R| = [32m8.580918e-04[39m
+ 3 Secant step           |R| = [32m1.011823e-05[39m
+ 4 Secant step           |R| = [32m1.024757e-05[39m
+ 5 Secant step           |R| = [32m6.959904e-08[39m
+[35mBeginning fixed point iteration 5[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 3, time = 0.364, dt = 0.144
+[36msub0: [39m 0 Nonlinear |R| = [32m4.826655e-09[39m
+[36msub0: [39m      0 Linear |R| = [32m4.826655e-09[39m
+[36msub0: [39m      1 Linear |R| = [32m2.879360e-10[39m
+[36msub0: [39m      2 Linear |R| = [32m3.681672e-12[39m
+[36msub0: [39m      3 Linear |R| = [32m1.159886e-13[39m
+[36msub0: [39m      4 Linear |R| = [32m3.837106e-15[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m3.844296e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m7.409757e-10[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m7.409757e-10[39m
+      0 Linear |R| = [32m7.409757e-10[39m
+      1 Linear |R| = [32m1.216070e-11[39m
+      2 Linear |R| = [32m7.734855e-14[39m
+      3 Linear |R| = [32m6.485618e-16[39m
+ 1 Nonlinear |R| = [32m6.322407e-16[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m8.846100e-02[39m
+ 1 Secant initialization |R| = [31m8.874733e-02[39m
+ 2 Secant initialization |R| = [32m8.580918e-04[39m
+ 3 Secant step           |R| = [32m1.011823e-05[39m
+ 4 Secant step           |R| = [32m1.024757e-05[39m
+ 5 Secant step           |R| = [32m6.959904e-08[39m
+ 6 Secant step           |R| = [32m7.409757e-10[39m
+Fixed point convergence reason: CONVERGED_RELATIVE
+
+Postprocessor Values:
++----------------+----------------+
+| time           | unorm          |
++----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |
+|   1.000000e-01 |   2.441319e-01 |
+|   2.200000e-01 |   3.244854e-01 |
+|   3.640000e-01 |   4.019343e-01 |
++----------------+----------------+
+
+[36msub0: [39m
+[36msub0: [39mPostprocessor Values:
+[36msub0: [39m+----------------+----------------+
+[36msub0: [39m| time           | vnorm          |
+[36msub0: [39m+----------------+----------------+
+[36msub0: [39m|   0.000000e+00 |   0.000000e+00 |
+[36msub0: [39m|   1.000000e-01 |   5.482190e-01 |
+[36msub0: [39m|   2.200000e-01 |   5.868948e-01 |
+[36msub0: [39m|   3.640000e-01 |   5.967235e-01 |
+[36msub0: [39m+----------------+----------------+
+[36msub0: [39m
+ NOT!!!!!!!!!!!!!! _cutback_occurred 
+BaseAdaptiveDT::computeDT()::_adaptive_timestepping 1
+else if (_adaptive_timestepping)
+_allowToShrink 1
+_allowToGrow 1
+_nl_its 1 growth_nl_its 4
+_l_its 3 growth_l_its 100
+
+Time Step 4, time = 0.5368, dt = 0.1728
+[35mInitial fixed point residual norm: [39m6.867914e-02[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 4, time = 0.5368, dt = 0.1728
+[36msub0: [39m 0 Nonlinear |R| = [32m8.484329e-04[39m
+[36msub0: [39m      0 Linear |R| = [32m8.484329e-04[39m
+[36msub0: [39m      1 Linear |R| = [32m1.035757e-04[39m
+[36msub0: [39m      2 Linear |R| = [32m2.445115e-06[39m
+[36msub0: [39m      3 Linear |R| = [32m4.635245e-08[39m
+[36msub0: [39m      4 Linear |R| = [32m7.484162e-10[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m7.914755e-10[39m
+[36msub0: [39m      0 Linear |R| = [32m7.914755e-10[39m
+[36msub0: [39m      1 Linear |R| = [32m2.357201e-11[39m
+[36msub0: [39m      2 Linear |R| = [32m6.112117e-13[39m
+[36msub0: [39m      3 Linear |R| = [32m2.198301e-14[39m
+[36msub0: [39m      4 Linear |R| = [32m3.420488e-16[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m9.270203e-16[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m6.875442e-02[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m6.875442e-02[39m
+      0 Linear |R| = [32m6.875442e-02[39m
+      1 Linear |R| = [32m2.211914e-03[39m
+      2 Linear |R| = [32m5.616011e-06[39m
+      3 Linear |R| = [32m7.150102e-08[39m
+ 1 Nonlinear |R| = [32m7.174653e-08[39m
+      0 Linear |R| = [32m7.174653e-08[39m
+      1 Linear |R| = [32m1.074786e-09[39m
+      2 Linear |R| = [32m6.874968e-12[39m
+      3 Linear |R| = [32m4.829324e-14[39m
+ 2 Nonlinear |R| = [32m4.842668e-14[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m6.867914e-02[39m
+ 1 Secant initialization |R| = [31m6.875442e-02[39m
+[35mBeginning fixed point iteration 1[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 4, time = 0.5368, dt = 0.1728
+[36msub0: [39m 0 Nonlinear |R| = [32m9.700291e-03[39m
+[36msub0: [39m      0 Linear |R| = [32m9.700291e-03[39m
+[36msub0: [39m      1 Linear |R| = [32m1.162333e-03[39m
+[36msub0: [39m      2 Linear |R| = [32m3.051545e-05[39m
+[36msub0: [39m      3 Linear |R| = [32m5.494440e-07[39m
+[36msub0: [39m      4 Linear |R| = [32m8.615837e-09[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m8.851467e-09[39m
+[36msub0: [39m      0 Linear |R| = [32m8.851467e-09[39m
+[36msub0: [39m      1 Linear |R| = [32m2.530745e-10[39m
+[36msub0: [39m      2 Linear |R| = [32m7.542330e-12[39m
+[36msub0: [39m      3 Linear |R| = [32m2.526698e-13[39m
+[36msub0: [39m      4 Linear |R| = [32m3.176839e-15[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m3.281637e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m8.982634e-04[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m8.982634e-04[39m
+      0 Linear |R| = [32m8.982634e-04[39m
+      1 Linear |R| = [32m2.946512e-05[39m
+      2 Linear |R| = [32m9.675238e-08[39m
+      3 Linear |R| = [32m1.318414e-09[39m
+ 1 Nonlinear |R| = [32m1.319784e-09[39m
+      0 Linear |R| = [32m1.319784e-09[39m
+      1 Linear |R| = [32m1.957826e-11[39m
+      2 Linear |R| = [32m1.260500e-13[39m
+      3 Linear |R| = [32m9.362710e-16[39m
+ 2 Nonlinear |R| = [32m9.294027e-16[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m6.867914e-02[39m
+ 1 Secant initialization |R| = [31m6.875442e-02[39m
+ 2 Secant initialization |R| = [32m8.982634e-04[39m
+[35mBeginning fixed point iteration 2[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 4, time = 0.5368, dt = 0.1728
+[36msub0: [39m 0 Nonlinear |R| = [32m1.323384e-04[39m
+[36msub0: [39m      0 Linear |R| = [32m1.323384e-04[39m
+[36msub0: [39m      1 Linear |R| = [32m1.615314e-05[39m
+[36msub0: [39m      2 Linear |R| = [32m3.785515e-07[39m
+[36msub0: [39m      3 Linear |R| = [32m7.193081e-09[39m
+[36msub0: [39m      4 Linear |R| = [32m1.167688e-10[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m1.292385e-10[39m
+[36msub0: [39m      0 Linear |R| = [32m1.292385e-10[39m
+[36msub0: [39m      1 Linear |R| = [32m3.841634e-12[39m
+[36msub0: [39m      2 Linear |R| = [32m9.474332e-14[39m
+[36msub0: [39m      3 Linear |R| = [32m3.640402e-15[39m
+[36msub0: [39m      4 Linear |R| = [32m5.144107e-17[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m9.348113e-16[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.255990e-05[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m1.255990e-05[39m
+      0 Linear |R| = [32m1.255990e-05[39m
+      1 Linear |R| = [32m4.122554e-07[39m
+      2 Linear |R| = [32m1.392488e-09[39m
+      3 Linear |R| = [32m1.884140e-11[39m
+ 1 Nonlinear |R| = [32m1.880737e-11[39m
+      0 Linear |R| = [32m1.880737e-11[39m
+      1 Linear |R| = [32m2.771927e-13[39m
+      2 Linear |R| = [32m1.774050e-15[39m
+      3 Linear |R| = [32m1.328703e-17[39m
+ 2 Nonlinear |R| = [32m7.915270e-17[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m6.867914e-02[39m
+ 1 Secant initialization |R| = [31m6.875442e-02[39m
+ 2 Secant initialization |R| = [32m8.982634e-04[39m
+ 3 Secant step           |R| = [32m1.255990e-05[39m
+[35mBeginning fixed point iteration 3[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 4, time = 0.5368, dt = 0.1728
+[36msub0: [39m 0 Nonlinear |R| = [32m2.729994e-08[39m
+[36msub0: [39m      0 Linear |R| = [32m2.729994e-08[39m
+[36msub0: [39m      1 Linear |R| = [32m3.315083e-09[39m
+[36msub0: [39m      2 Linear |R| = [32m6.752497e-11[39m
+[36msub0: [39m      3 Linear |R| = [32m1.381552e-12[39m
+[36msub0: [39m      4 Linear |R| = [32m2.304497e-14[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m2.306545e-14[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [31m1.274015e-05[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m1.274015e-05[39m
+      0 Linear |R| = [32m1.274015e-05[39m
+      1 Linear |R| = [32m4.181398e-07[39m
+      2 Linear |R| = [32m1.416931e-09[39m
+      3 Linear |R| = [32m1.914337e-11[39m
+ 1 Nonlinear |R| = [32m1.914529e-11[39m
+      0 Linear |R| = [32m1.914529e-11[39m
+      1 Linear |R| = [32m2.804290e-13[39m
+      2 Linear |R| = [32m1.806104e-15[39m
+      3 Linear |R| = [32m1.354348e-17[39m
+ 2 Nonlinear |R| = [32m8.874948e-17[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m6.867914e-02[39m
+ 1 Secant initialization |R| = [31m6.875442e-02[39m
+ 2 Secant initialization |R| = [32m8.982634e-04[39m
+ 3 Secant step           |R| = [32m1.255990e-05[39m
+ 4 Secant step           |R| = [32m1.274015e-05[39m
+[35mBeginning fixed point iteration 4[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 4, time = 0.5368, dt = 0.1728
+[36msub0: [39m 0 Nonlinear |R| = [32m1.905935e-06[39m
+[36msub0: [39m      0 Linear |R| = [32m1.905935e-06[39m
+[36msub0: [39m      1 Linear |R| = [32m2.329321e-07[39m
+[36msub0: [39m      2 Linear |R| = [32m5.325225e-09[39m
+[36msub0: [39m      3 Linear |R| = [32m1.026555e-10[39m
+[36msub0: [39m      4 Linear |R| = [32m1.671475e-12[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m1.797773e-12[39m
+[36msub0: [39m      0 Linear |R| = [32m1.797773e-12[39m
+[36msub0: [39m      1 Linear |R| = [32m5.607099e-14[39m
+[36msub0: [39m      2 Linear |R| = [32m1.315224e-15[39m
+[36msub0: [39m      3 Linear |R| = [32m5.183871e-17[39m
+[36msub0: [39m      4 Linear |R| = [32m7.575934e-19[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m1.074474e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m5.315345e-08[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m5.315345e-08[39m
+      0 Linear |R| = [32m5.315345e-08[39m
+      1 Linear |R| = [32m1.251190e-09[39m
+      2 Linear |R| = [32m7.335454e-12[39m
+      3 Linear |R| = [32m5.931682e-14[39m
+ 1 Nonlinear |R| = [32m5.921190e-14[39m
+      0 Linear |R| = [32m5.921190e-14[39m
+      1 Linear |R| = [32m7.499112e-16[39m
+      2 Linear |R| = [32m7.212611e-18[39m
+      3 Linear |R| = [32m4.737719e-20[39m
+ 2 Nonlinear |R| = [32m7.220428e-17[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m6.867914e-02[39m
+ 1 Secant initialization |R| = [31m6.875442e-02[39m
+ 2 Secant initialization |R| = [32m8.982634e-04[39m
+ 3 Secant step           |R| = [32m1.255990e-05[39m
+ 4 Secant step           |R| = [32m1.274015e-05[39m
+ 5 Secant step           |R| = [32m5.315345e-08[39m
+[35mBeginning fixed point iteration 5[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 4, time = 0.5368, dt = 0.1728
+[36msub0: [39m 0 Nonlinear |R| = [32m4.666096e-09[39m
+[36msub0: [39m      0 Linear |R| = [32m4.666096e-09[39m
+[36msub0: [39m      1 Linear |R| = [32m2.899845e-10[39m
+[36msub0: [39m      2 Linear |R| = [32m2.487985e-12[39m
+[36msub0: [39m      3 Linear |R| = [32m5.462706e-14[39m
+[36msub0: [39m      4 Linear |R| = [32m1.304991e-15[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m1.688404e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m6.593321e-10[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m6.593321e-10[39m
+      0 Linear |R| = [32m6.593321e-10[39m
+      1 Linear |R| = [32m1.482025e-11[39m
+      2 Linear |R| = [32m9.567453e-14[39m
+      3 Linear |R| = [32m7.419642e-16[39m
+ 1 Nonlinear |R| = [32m7.459470e-16[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m6.867914e-02[39m
+ 1 Secant initialization |R| = [31m6.875442e-02[39m
+ 2 Secant initialization |R| = [32m8.982634e-04[39m
+ 3 Secant step           |R| = [32m1.255990e-05[39m
+ 4 Secant step           |R| = [32m1.274015e-05[39m
+ 5 Secant step           |R| = [32m5.315345e-08[39m
+ 6 Secant step           |R| = [32m6.593321e-10[39m
+Fixed point convergence reason: CONVERGED_RELATIVE
+
+Postprocessor Values:
++----------------+----------------+
+| time           | unorm          |
++----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |
+|   1.000000e-01 |   2.441319e-01 |
+|   2.200000e-01 |   3.244854e-01 |
+|   3.640000e-01 |   4.019343e-01 |
+|   5.368000e-01 |   4.825929e-01 |
++----------------+----------------+
+
+[36msub0: [39m
+[36msub0: [39mPostprocessor Values:
+[36msub0: [39m+----------------+----------------+
+[36msub0: [39m| time           | vnorm          |
+[36msub0: [39m+----------------+----------------+
+[36msub0: [39m|   0.000000e+00 |   0.000000e+00 |
+[36msub0: [39m|   1.000000e-01 |   5.482190e-01 |
+[36msub0: [39m|   2.200000e-01 |   5.868948e-01 |
+[36msub0: [39m|   3.640000e-01 |   5.967235e-01 |
+[36msub0: [39m|   5.368000e-01 |   6.047535e-01 |
+[36msub0: [39m+----------------+----------------+
+[36msub0: [39m
+ NOT!!!!!!!!!!!!!! _cutback_occurred 
+BaseAdaptiveDT::computeDT()::_adaptive_timestepping 1
+else if (_adaptive_timestepping)
+_allowToShrink 1
+_allowToGrow 1
+_nl_its 1 growth_nl_its 4
+_l_its 3 growth_l_its 100
+
+Time Step 5, time = 0.74416, dt = 0.20736
+[35mInitial fixed point residual norm: [39m5.689803e-02[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 5, time = 0.74416, dt = 0.20736
+[36msub0: [39m 0 Nonlinear |R| = [32m5.737234e-04[39m
+[36msub0: [39m      0 Linear |R| = [32m5.737234e-04[39m
+[36msub0: [39m      1 Linear |R| = [32m7.052424e-05[39m
+[36msub0: [39m      2 Linear |R| = [32m1.677963e-06[39m
+[36msub0: [39m      3 Linear |R| = [32m3.172207e-08[39m
+[36msub0: [39m      4 Linear |R| = [32m5.136185e-10[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m5.141595e-10[39m
+[36msub0: [39m      0 Linear |R| = [32m5.141595e-10[39m
+[36msub0: [39m      1 Linear |R| = [32m1.504854e-11[39m
+[36msub0: [39m      2 Linear |R| = [32m4.467832e-13[39m
+[36msub0: [39m      3 Linear |R| = [32m1.428819e-14[39m
+[36msub0: [39m      4 Linear |R| = [32m2.187257e-16[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m9.836066e-16[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m5.695168e-02[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m5.695168e-02[39m
+      0 Linear |R| = [32m5.695168e-02[39m
+      1 Linear |R| = [32m2.071583e-03[39m
+      2 Linear |R| = [32m7.079540e-06[39m
+      3 Linear |R| = [32m1.061670e-07[39m
+ 1 Nonlinear |R| = [32m1.067765e-07[39m
+      0 Linear |R| = [32m1.067765e-07[39m
+      1 Linear |R| = [32m1.776740e-09[39m
+      2 Linear |R| = [32m1.314460e-11[39m
+      3 Linear |R| = [32m1.109625e-13[39m
+ 2 Nonlinear |R| = [32m1.113440e-13[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m5.689803e-02[39m
+ 1 Secant initialization |R| = [31m5.695168e-02[39m
+[35mBeginning fixed point iteration 1[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 5, time = 0.74416, dt = 0.20736
+[36msub0: [39m 0 Nonlinear |R| = [32m9.633142e-03[39m
+[36msub0: [39m      0 Linear |R| = [32m9.633142e-03[39m
+[36msub0: [39m      1 Linear |R| = [32m1.175376e-03[39m
+[36msub0: [39m      2 Linear |R| = [32m2.974480e-05[39m
+[36msub0: [39m      3 Linear |R| = [32m5.432323e-07[39m
+[36msub0: [39m      4 Linear |R| = [32m8.683650e-09[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m9.138627e-09[39m
+[36msub0: [39m      0 Linear |R| = [32m9.138627e-09[39m
+[36msub0: [39m      1 Linear |R| = [32m2.763369e-10[39m
+[36msub0: [39m      2 Linear |R| = [32m7.930366e-12[39m
+[36msub0: [39m      3 Linear |R| = [32m2.745387e-13[39m
+[36msub0: [39m      4 Linear |R| = [32m3.595043e-15[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m3.673059e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m9.146895e-04[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m9.146895e-04[39m
+      0 Linear |R| = [32m9.146895e-04[39m
+      1 Linear |R| = [32m3.343766e-05[39m
+      2 Linear |R| = [32m1.347462e-07[39m
+      3 Linear |R| = [32m1.991662e-09[39m
+ 1 Nonlinear |R| = [32m1.993656e-09[39m
+      0 Linear |R| = [32m1.993656e-09[39m
+      1 Linear |R| = [32m3.268247e-11[39m
+      2 Linear |R| = [32m2.306120e-13[39m
+      3 Linear |R| = [32m1.983660e-15[39m
+ 2 Nonlinear |R| = [32m1.977397e-15[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m5.689803e-02[39m
+ 1 Secant initialization |R| = [31m5.695168e-02[39m
+ 2 Secant initialization |R| = [32m9.146895e-04[39m
+[35mBeginning fixed point iteration 2[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 5, time = 0.74416, dt = 0.20736
+[36msub0: [39m 0 Nonlinear |R| = [32m1.571724e-04[39m
+[36msub0: [39m      0 Linear |R| = [32m1.571724e-04[39m
+[36msub0: [39m      1 Linear |R| = [32m1.934145e-05[39m
+[36msub0: [39m      2 Linear |R| = [32m4.505979e-07[39m
+[36msub0: [39m      3 Linear |R| = [32m8.618487e-09[39m
+[36msub0: [39m      4 Linear |R| = [32m1.401399e-10[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m1.444730e-10[39m
+[36msub0: [39m      0 Linear |R| = [32m1.444730e-10[39m
+[36msub0: [39m      1 Linear |R| = [32m4.581841e-12[39m
+[36msub0: [39m      2 Linear |R| = [32m1.094498e-13[39m
+[36msub0: [39m      3 Linear |R| = [32m4.209389e-15[39m
+[36msub0: [39m      4 Linear |R| = [32m5.985094e-17[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m1.067733e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.506091e-05[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m1.506091e-05[39m
+      0 Linear |R| = [32m1.506091e-05[39m
+      1 Linear |R| = [32m5.508840e-07[39m
+      2 Linear |R| = [32m2.258827e-09[39m
+      3 Linear |R| = [32m3.331193e-11[39m
+ 1 Nonlinear |R| = [32m3.346209e-11[39m
+      0 Linear |R| = [32m3.346209e-11[39m
+      1 Linear |R| = [32m5.446238e-13[39m
+      2 Linear |R| = [32m3.827847e-15[39m
+      3 Linear |R| = [32m3.239171e-17[39m
+ 2 Nonlinear |R| = [32m1.099077e-16[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m5.689803e-02[39m
+ 1 Secant initialization |R| = [31m5.695168e-02[39m
+ 2 Secant initialization |R| = [32m9.146895e-04[39m
+ 3 Secant step           |R| = [32m1.506091e-05[39m
+[35mBeginning fixed point iteration 3[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 5, time = 0.74416, dt = 0.20736
+[36msub0: [39m 0 Nonlinear |R| = [32m4.359645e-08[39m
+[36msub0: [39m      0 Linear |R| = [32m4.359645e-08[39m
+[36msub0: [39m      1 Linear |R| = [32m5.358403e-09[39m
+[36msub0: [39m      2 Linear |R| = [32m1.122215e-10[39m
+[36msub0: [39m      3 Linear |R| = [32m2.276556e-12[39m
+[36msub0: [39m      4 Linear |R| = [32m3.759346e-14[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m4.084443e-14[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [31m1.530884e-05[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m1.530884e-05[39m
+      0 Linear |R| = [32m1.530884e-05[39m
+      1 Linear |R| = [32m5.599470e-07[39m
+      2 Linear |R| = [32m2.300715e-09[39m
+      3 Linear |R| = [32m3.390894e-11[39m
+ 1 Nonlinear |R| = [32m3.397331e-11[39m
+      0 Linear |R| = [32m3.397331e-11[39m
+      1 Linear |R| = [32m5.535191e-13[39m
+      2 Linear |R| = [32m3.899728e-15[39m
+      3 Linear |R| = [32m3.301872e-17[39m
+ 2 Nonlinear |R| = [32m9.885130e-17[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m5.689803e-02[39m
+ 1 Secant initialization |R| = [31m5.695168e-02[39m
+ 2 Secant initialization |R| = [32m9.146895e-04[39m
+ 3 Secant step           |R| = [32m1.506091e-05[39m
+ 4 Secant step           |R| = [32m1.530884e-05[39m
+[35mBeginning fixed point iteration 4[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 5, time = 0.74416, dt = 0.20736
+[36msub0: [39m 0 Nonlinear |R| = [32m2.676065e-06[39m
+[36msub0: [39m      0 Linear |R| = [32m2.676065e-06[39m
+[36msub0: [39m      1 Linear |R| = [32m3.295471e-07[39m
+[36msub0: [39m      2 Linear |R| = [32m7.556101e-09[39m
+[36msub0: [39m      3 Linear |R| = [32m1.458743e-10[39m
+[36msub0: [39m      4 Linear |R| = [32m2.375921e-12[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m2.391294e-12[39m
+[36msub0: [39m      0 Linear |R| = [32m2.391294e-12[39m
+[36msub0: [39m      1 Linear |R| = [32m7.618260e-14[39m
+[36msub0: [39m      2 Linear |R| = [32m1.893351e-15[39m
+[36msub0: [39m      3 Linear |R| = [32m6.915053e-17[39m
+[36msub0: [39m      4 Linear |R| = [32m1.065230e-18[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m9.177142e-16[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m4.332184e-08[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m4.332184e-08[39m
+      0 Linear |R| = [32m4.332184e-08[39m
+      1 Linear |R| = [32m1.251678e-09[39m
+      2 Linear |R| = [32m6.705429e-12[39m
+      3 Linear |R| = [32m6.519953e-14[39m
+ 1 Nonlinear |R| = [32m6.507170e-14[39m
+      0 Linear |R| = [32m6.507170e-14[39m
+      1 Linear |R| = [32m9.298607e-16[39m
+      2 Linear |R| = [32m7.344383e-18[39m
+      3 Linear |R| = [32m5.607374e-20[39m
+ 2 Nonlinear |R| = [32m8.957643e-17[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m5.689803e-02[39m
+ 1 Secant initialization |R| = [31m5.695168e-02[39m
+ 2 Secant initialization |R| = [32m9.146895e-04[39m
+ 3 Secant step           |R| = [32m1.506091e-05[39m
+ 4 Secant step           |R| = [32m1.530884e-05[39m
+ 5 Secant step           |R| = [32m4.332184e-08[39m
+[35mBeginning fixed point iteration 5[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 5, time = 0.74416, dt = 0.20736
+[36msub0: [39m 0 Nonlinear |R| = [32m4.575996e-09[39m
+[36msub0: [39m      0 Linear |R| = [32m4.575996e-09[39m
+[36msub0: [39m      1 Linear |R| = [32m2.930500e-10[39m
+[36msub0: [39m      2 Linear |R| = [32m2.778108e-12[39m
+[36msub0: [39m      3 Linear |R| = [32m1.211022e-13[39m
+[36msub0: [39m      4 Linear |R| = [32m2.735813e-15[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m2.890771e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m6.239900e-10[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m6.239900e-10[39m
+      0 Linear |R| = [32m6.239900e-10[39m
+      1 Linear |R| = [32m1.760826e-11[39m
+      2 Linear |R| = [32m1.042166e-13[39m
+      3 Linear |R| = [32m9.177111e-16[39m
+ 1 Nonlinear |R| = [32m9.404670e-16[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m5.689803e-02[39m
+ 1 Secant initialization |R| = [31m5.695168e-02[39m
+ 2 Secant initialization |R| = [32m9.146895e-04[39m
+ 3 Secant step           |R| = [32m1.506091e-05[39m
+ 4 Secant step           |R| = [32m1.530884e-05[39m
+ 5 Secant step           |R| = [32m4.332184e-08[39m
+ 6 Secant step           |R| = [32m6.239900e-10[39m
+[35mBeginning fixed point iteration 6[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 5, time = 0.74416, dt = 0.20736
+[36msub0: [39m 0 Nonlinear |R| = [32m6.348728e-11[39m
+[36msub0: [39m      0 Linear |R| = [32m6.348728e-11[39m
+[36msub0: [39m      1 Linear |R| = [32m4.049115e-12[39m
+[36msub0: [39m      2 Linear |R| = [32m7.317660e-14[39m
+[36msub0: [39m      3 Linear |R| = [32m1.836872e-15[39m
+[36msub0: [39m      4 Linear |R| = [32m3.995736e-17[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m6.317027e-16[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.584286e-12[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m1.584286e-12[39m
+      0 Linear |R| = [32m1.584286e-12[39m
+      1 Linear |R| = [32m2.815449e-14[39m
+      2 Linear |R| = [32m1.692175e-16[39m
+      3 Linear |R| = [32m2.446100e-18[39m
+ 1 Nonlinear |R| = [32m1.023033e-16[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m5.689803e-02[39m
+ 1 Secant initialization |R| = [31m5.695168e-02[39m
+ 2 Secant initialization |R| = [32m9.146895e-04[39m
+ 3 Secant step           |R| = [32m1.506091e-05[39m
+ 4 Secant step           |R| = [32m1.530884e-05[39m
+ 5 Secant step           |R| = [32m4.332184e-08[39m
+ 6 Secant step           |R| = [32m6.239900e-10[39m
+ 7 Secant step           |R| = [32m1.584286e-12[39m
+Fixed point convergence reason: CONVERGED_RELATIVE
+
+Postprocessor Values:
++----------------+----------------+
+| time           | unorm          |
++----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |
+|   1.000000e-01 |   2.441319e-01 |
+|   2.200000e-01 |   3.244854e-01 |
+|   3.640000e-01 |   4.019343e-01 |
+|   5.368000e-01 |   4.825929e-01 |
+|   7.441600e-01 |   5.667542e-01 |
++----------------+----------------+
+
+[36msub0: [39m
+[36msub0: [39mPostprocessor Values:
+[36msub0: [39m+----------------+----------------+
+[36msub0: [39m| time           | vnorm          |
+[36msub0: [39m+----------------+----------------+
+[36msub0: [39m|   0.000000e+00 |   0.000000e+00 |
+[36msub0: [39m|   1.000000e-01 |   5.482190e-01 |
+[36msub0: [39m|   2.200000e-01 |   5.868948e-01 |
+[36msub0: [39m|   3.640000e-01 |   5.967235e-01 |
+[36msub0: [39m|   5.368000e-01 |   6.047535e-01 |
+[36msub0: [39m|   7.441600e-01 |   6.128525e-01 |
+[36msub0: [39m+----------------+----------------+
+[36msub0: [39m
+ NOT!!!!!!!!!!!!!! _cutback_occurred 
+BaseAdaptiveDT::computeDT()::_adaptive_timestepping 1
+else if (_adaptive_timestepping)
+_allowToShrink 1
+_allowToGrow 1
+_nl_its 1 growth_nl_its 4
+_l_its 3 growth_l_its 100
+
+Time Step 6, time = 0.992992, dt = 0.248832
+[35mInitial fixed point residual norm: [39m4.722139e-02[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 6, time = 0.992992, dt = 0.248832
+[36msub0: [39m 0 Nonlinear |R| = [32m4.749746e-04[39m
+[36msub0: [39m      0 Linear |R| = [32m4.749746e-04[39m
+[36msub0: [39m      1 Linear |R| = [32m5.879907e-05[39m
+[36msub0: [39m      2 Linear |R| = [32m1.387434e-06[39m
+[36msub0: [39m      3 Linear |R| = [32m2.641535e-08[39m
+[36msub0: [39m      4 Linear |R| = [32m4.288931e-10[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m4.350009e-10[39m
+[36msub0: [39m      0 Linear |R| = [32m4.350009e-10[39m
+[36msub0: [39m      1 Linear |R| = [32m1.330415e-11[39m
+[36msub0: [39m      2 Linear |R| = [32m3.623047e-13[39m
+[36msub0: [39m      3 Linear |R| = [32m1.231296e-14[39m
+[36msub0: [39m      4 Linear |R| = [32m1.949929e-16[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m1.155551e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m4.726685e-02[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m4.726685e-02[39m
+      0 Linear |R| = [32m4.726685e-02[39m
+      1 Linear |R| = [32m1.904741e-03[39m
+      2 Linear |R| = [32m8.497236e-06[39m
+      3 Linear |R| = [32m1.359692e-07[39m
+ 1 Nonlinear |R| = [32m1.356104e-07[39m
+      0 Linear |R| = [32m1.356104e-07[39m
+      1 Linear |R| = [32m2.492664e-09[39m
+      2 Linear |R| = [32m1.937531e-11[39m
+      3 Linear |R| = [32m1.869591e-13[39m
+ 2 Nonlinear |R| = [32m1.869812e-13[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m4.722139e-02[39m
+ 1 Secant initialization |R| = [31m4.726685e-02[39m
+[35mBeginning fixed point iteration 1[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 6, time = 0.992992, dt = 0.248832
+[36msub0: [39m 0 Nonlinear |R| = [32m9.369472e-03[39m
+[36msub0: [39m      0 Linear |R| = [32m9.369472e-03[39m
+[36msub0: [39m      1 Linear |R| = [32m1.156137e-03[39m
+[36msub0: [39m      2 Linear |R| = [32m2.836646e-05[39m
+[36msub0: [39m      3 Linear |R| = [32m5.278746e-07[39m
+[36msub0: [39m      4 Linear |R| = [32m8.520671e-09[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m9.234934e-09[39m
+[36msub0: [39m      0 Linear |R| = [32m9.234934e-09[39m
+[36msub0: [39m      1 Linear |R| = [32m2.838252e-10[39m
+[36msub0: [39m      2 Linear |R| = [32m8.237754e-12[39m
+[36msub0: [39m      3 Linear |R| = [32m2.814018e-13[39m
+[36msub0: [39m      4 Linear |R| = [32m3.787324e-15[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m4.095948e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m9.020021e-04[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m9.020021e-04[39m
+      0 Linear |R| = [32m9.020021e-04[39m
+      1 Linear |R| = [32m3.644468e-05[39m
+      2 Linear |R| = [32m1.774473e-07[39m
+      3 Linear |R| = [32m2.808905e-09[39m
+ 1 Nonlinear |R| = [32m2.802950e-09[39m
+      0 Linear |R| = [32m2.802950e-09[39m
+      1 Linear |R| = [32m5.051969e-11[39m
+      2 Linear |R| = [32m3.925723e-13[39m
+      3 Linear |R| = [32m3.484900e-15[39m
+ 2 Nonlinear |R| = [32m3.467008e-15[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m4.722139e-02[39m
+ 1 Secant initialization |R| = [31m4.726685e-02[39m
+ 2 Secant initialization |R| = [32m9.020021e-04[39m
+[35mBeginning fixed point iteration 2[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 6, time = 0.992992, dt = 0.248832
+[36msub0: [39m 0 Nonlinear |R| = [32m1.798766e-04[39m
+[36msub0: [39m      0 Linear |R| = [32m1.798766e-04[39m
+[36msub0: [39m      1 Linear |R| = [32m2.228451e-05[39m
+[36msub0: [39m      2 Linear |R| = [32m5.173901e-07[39m
+[36msub0: [39m      3 Linear |R| = [32m9.942839e-09[39m
+[36msub0: [39m      4 Linear |R| = [32m1.618150e-10[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m1.570413e-10[39m
+[36msub0: [39m      0 Linear |R| = [32m1.570413e-10[39m
+[36msub0: [39m      1 Linear |R| = [32m4.922641e-12[39m
+[36msub0: [39m      2 Linear |R| = [32m1.329953e-13[39m
+[36msub0: [39m      3 Linear |R| = [32m4.530902e-15[39m
+[36msub0: [39m      4 Linear |R| = [32m6.871729e-17[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m9.996304e-16[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.737312e-05[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m1.737312e-05[39m
+      0 Linear |R| = [32m1.737312e-05[39m
+      1 Linear |R| = [32m7.022742e-07[39m
+      2 Linear |R| = [32m3.454753e-09[39m
+      3 Linear |R| = [32m5.461969e-11[39m
+ 1 Nonlinear |R| = [32m5.453096e-11[39m
+      0 Linear |R| = [32m5.453096e-11[39m
+      1 Linear |R| = [32m9.789323e-13[39m
+      2 Linear |R| = [32m7.603170e-15[39m
+      3 Linear |R| = [32m6.698833e-17[39m
+ 2 Nonlinear |R| = [32m1.124228e-16[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m4.722139e-02[39m
+ 1 Secant initialization |R| = [31m4.726685e-02[39m
+ 2 Secant initialization |R| = [32m9.020021e-04[39m
+ 3 Secant step           |R| = [32m1.737312e-05[39m
+[35mBeginning fixed point iteration 3[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 6, time = 0.992992, dt = 0.248832
+[36msub0: [39m 0 Nonlinear |R| = [32m6.729812e-08[39m
+[36msub0: [39m      0 Linear |R| = [32m6.729812e-08[39m
+[36msub0: [39m      1 Linear |R| = [32m8.340527e-09[39m
+[36msub0: [39m      2 Linear |R| = [32m1.806477e-10[39m
+[36msub0: [39m      3 Linear |R| = [32m3.610805e-12[39m
+[36msub0: [39m      4 Linear |R| = [32m5.926042e-14[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m6.300717e-14[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [31m1.770323e-05[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m1.770323e-05[39m
+      0 Linear |R| = [32m1.770323e-05[39m
+      1 Linear |R| = [32m7.156363e-07[39m
+      2 Linear |R| = [32m3.525285e-09[39m
+      3 Linear |R| = [32m5.571873e-11[39m
+ 1 Nonlinear |R| = [32m5.575160e-11[39m
+      0 Linear |R| = [32m5.575160e-11[39m
+      1 Linear |R| = [32m9.999719e-13[39m
+      2 Linear |R| = [32m7.778669e-15[39m
+      3 Linear |R| = [32m6.824120e-17[39m
+ 2 Nonlinear |R| = [32m1.273356e-16[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m4.722139e-02[39m
+ 1 Secant initialization |R| = [31m4.726685e-02[39m
+ 2 Secant initialization |R| = [32m9.020021e-04[39m
+ 3 Secant step           |R| = [32m1.737312e-05[39m
+ 4 Secant step           |R| = [32m1.770323e-05[39m
+[35mBeginning fixed point iteration 4[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 6, time = 0.992992, dt = 0.248832
+[36msub0: [39m 0 Nonlinear |R| = [32m3.600521e-06[39m
+[36msub0: [39m      0 Linear |R| = [32m3.600521e-06[39m
+[36msub0: [39m      1 Linear |R| = [32m4.462309e-07[39m
+[36msub0: [39m      2 Linear |R| = [32m1.026212e-08[39m
+[36msub0: [39m      3 Linear |R| = [32m1.983110e-10[39m
+[36msub0: [39m      4 Linear |R| = [32m3.230376e-12[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m3.398693e-12[39m
+[36msub0: [39m      0 Linear |R| = [32m3.398693e-12[39m
+[36msub0: [39m      1 Linear |R| = [32m1.048203e-13[39m
+[36msub0: [39m      2 Linear |R| = [32m2.711507e-15[39m
+[36msub0: [39m      3 Linear |R| = [32m9.418775e-17[39m
+[36msub0: [39m      4 Linear |R| = [32m1.554758e-18[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m9.990432e-16[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.526653e-08[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m3.526653e-08[39m
+      0 Linear |R| = [32m3.526653e-08[39m
+      1 Linear |R| = [32m1.181303e-09[39m
+      2 Linear |R| = [32m5.732222e-12[39m
+      3 Linear |R| = [32m7.125293e-14[39m
+ 1 Nonlinear |R| = [32m7.113475e-14[39m
+      0 Linear |R| = [32m7.113475e-14[39m
+      1 Linear |R| = [32m1.071624e-15[39m
+      2 Linear |R| = [32m7.719013e-18[39m
+      3 Linear |R| = [32m7.594159e-20[39m
+ 2 Nonlinear |R| = [32m1.032261e-16[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m4.722139e-02[39m
+ 1 Secant initialization |R| = [31m4.726685e-02[39m
+ 2 Secant initialization |R| = [32m9.020021e-04[39m
+ 3 Secant step           |R| = [32m1.737312e-05[39m
+ 4 Secant step           |R| = [32m1.770323e-05[39m
+ 5 Secant step           |R| = [32m3.526653e-08[39m
+[35mBeginning fixed point iteration 5[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 6, time = 0.992992, dt = 0.248832
+[36msub0: [39m 0 Nonlinear |R| = [32m4.295587e-09[39m
+[36msub0: [39m      0 Linear |R| = [32m4.295587e-09[39m
+[36msub0: [39m      1 Linear |R| = [32m2.802778e-10[39m
+[36msub0: [39m      2 Linear |R| = [32m3.318978e-12[39m
+[36msub0: [39m      3 Linear |R| = [32m1.205362e-13[39m
+[36msub0: [39m      4 Linear |R| = [32m2.369381e-15[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m2.702028e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m5.922223e-10[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m5.922223e-10[39m
+      0 Linear |R| = [32m5.922223e-10[39m
+      1 Linear |R| = [32m1.964636e-11[39m
+      2 Linear |R| = [32m1.024826e-13[39m
+      3 Linear |R| = [32m1.172527e-15[39m
+ 1 Nonlinear |R| = [32m1.168793e-15[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m4.722139e-02[39m
+ 1 Secant initialization |R| = [31m4.726685e-02[39m
+ 2 Secant initialization |R| = [32m9.020021e-04[39m
+ 3 Secant step           |R| = [32m1.737312e-05[39m
+ 4 Secant step           |R| = [32m1.770323e-05[39m
+ 5 Secant step           |R| = [32m3.526653e-08[39m
+ 6 Secant step           |R| = [32m5.922223e-10[39m
+[35mBeginning fixed point iteration 6[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 6, time = 0.992992, dt = 0.248832
+[36msub0: [39m 0 Nonlinear |R| = [32m7.020782e-11[39m
+[36msub0: [39m      0 Linear |R| = [32m7.020782e-11[39m
+[36msub0: [39m      1 Linear |R| = [32m4.608220e-12[39m
+[36msub0: [39m      2 Linear |R| = [32m7.921122e-14[39m
+[36msub0: [39m      3 Linear |R| = [32m1.905836e-15[39m
+[36msub0: [39m      4 Linear |R| = [32m3.949426e-17[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m7.415580e-16[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.137824e-12[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m1.137824e-12[39m
+      0 Linear |R| = [32m1.137824e-12[39m
+      1 Linear |R| = [32m2.217416e-14[39m
+      2 Linear |R| = [32m1.379293e-16[39m
+      3 Linear |R| = [32m2.268154e-18[39m
+ 1 Nonlinear |R| = [32m1.027234e-16[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m4.722139e-02[39m
+ 1 Secant initialization |R| = [31m4.726685e-02[39m
+ 2 Secant initialization |R| = [32m9.020021e-04[39m
+ 3 Secant step           |R| = [32m1.737312e-05[39m
+ 4 Secant step           |R| = [32m1.770323e-05[39m
+ 5 Secant step           |R| = [32m3.526653e-08[39m
+ 6 Secant step           |R| = [32m5.922223e-10[39m
+ 7 Secant step           |R| = [32m1.137824e-12[39m
+Fixed point convergence reason: CONVERGED_RELATIVE
+
+Postprocessor Values:
++----------------+----------------+
+| time           | unorm          |
++----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |
+|   1.000000e-01 |   2.441319e-01 |
+|   2.200000e-01 |   3.244854e-01 |
+|   3.640000e-01 |   4.019343e-01 |
+|   5.368000e-01 |   4.825929e-01 |
+|   7.441600e-01 |   5.667542e-01 |
+|   9.929920e-01 |   6.520313e-01 |
++----------------+----------------+
+
+[36msub0: [39m
+[36msub0: [39mPostprocessor Values:
+[36msub0: [39m+----------------+----------------+
+[36msub0: [39m| time           | vnorm          |
+[36msub0: [39m+----------------+----------------+
+[36msub0: [39m|   0.000000e+00 |   0.000000e+00 |
+[36msub0: [39m|   1.000000e-01 |   5.482190e-01 |
+[36msub0: [39m|   2.200000e-01 |   5.868948e-01 |
+[36msub0: [39m|   3.640000e-01 |   5.967235e-01 |
+[36msub0: [39m|   5.368000e-01 |   6.047535e-01 |
+[36msub0: [39m|   7.441600e-01 |   6.128525e-01 |
+[36msub0: [39m|   9.929920e-01 |   6.208954e-01 |
+[36msub0: [39m+----------------+----------------+
+[36msub0: [39m
+ NOT!!!!!!!!!!!!!! _cutback_occurred 
+BaseAdaptiveDT::computeDT()::_adaptive_timestepping 1
+else if (_adaptive_timestepping)
+_allowToShrink 1
+_allowToGrow 1
+_nl_its 1 growth_nl_its 4
+_l_its 3 growth_l_its 100
+
+Time Step 7, time = 1.29159, dt = 0.298598
+[35mInitial fixed point residual norm: [39m3.838904e-02[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 7, time = 1.29159, dt = 0.298598
+[36msub0: [39m 0 Nonlinear |R| = [32m3.880390e-04[39m
+[36msub0: [39m      0 Linear |R| = [32m3.880390e-04[39m
+[36msub0: [39m      1 Linear |R| = [32m4.831840e-05[39m
+[36msub0: [39m      2 Linear |R| = [32m1.132678e-06[39m
+[36msub0: [39m      3 Linear |R| = [32m2.169528e-08[39m
+[36msub0: [39m      4 Linear |R| = [32m3.527872e-10[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m3.548880e-10[39m
+[36msub0: [39m      0 Linear |R| = [32m3.548880e-10[39m
+[36msub0: [39m      1 Linear |R| = [32m1.106740e-11[39m
+[36msub0: [39m      2 Linear |R| = [32m2.856456e-13[39m
+[36msub0: [39m      3 Linear |R| = [32m1.039844e-14[39m
+[36msub0: [39m      4 Linear |R| = [32m1.575558e-16[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m9.799178e-16[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.842664e-02[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m3.842664e-02[39m
+      0 Linear |R| = [32m3.842664e-02[39m
+      1 Linear |R| = [32m1.702633e-03[39m
+      2 Linear |R| = [32m9.462981e-06[39m
+      3 Linear |R| = [32m1.593524e-07[39m
+ 1 Nonlinear |R| = [32m1.590973e-07[39m
+      0 Linear |R| = [32m1.590973e-07[39m
+      1 Linear |R| = [32m3.173627e-09[39m
+      2 Linear |R| = [32m2.710487e-11[39m
+      3 Linear |R| = [32m2.494115e-13[39m
+ 2 Nonlinear |R| = [32m2.494687e-13[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m3.838904e-02[39m
+ 1 Secant initialization |R| = [31m3.842664e-02[39m
+[35mBeginning fixed point iteration 1[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 7, time = 1.29159, dt = 0.298598
+[36msub0: [39m 0 Nonlinear |R| = [32m8.825652e-03[39m
+[36msub0: [39m      0 Linear |R| = [32m8.825652e-03[39m
+[36msub0: [39m      1 Linear |R| = [32m1.097434e-03[39m
+[36msub0: [39m      2 Linear |R| = [32m2.632032e-05[39m
+[36msub0: [39m      3 Linear |R| = [32m4.973914e-07[39m
+[36msub0: [39m      4 Linear |R| = [32m8.065963e-09[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m8.050737e-09[39m
+[36msub0: [39m      0 Linear |R| = [32m8.050737e-09[39m
+[36msub0: [39m      1 Linear |R| = [32m2.554481e-10[39m
+[36msub0: [39m      2 Linear |R| = [32m7.251579e-12[39m
+[36msub0: [39m      3 Linear |R| = [32m2.396674e-13[39m
+[36msub0: [39m      4 Linear |R| = [32m3.514791e-15[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m3.570306e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m8.571048e-04[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m8.571048e-04[39m
+      0 Linear |R| = [32m8.571048e-04[39m
+      1 Linear |R| = [32m3.805580e-05[39m
+      2 Linear |R| = [32m2.212523e-07[39m
+      3 Linear |R| = [32m3.698258e-09[39m
+ 1 Nonlinear |R| = [32m3.704705e-09[39m
+      0 Linear |R| = [32m3.704705e-09[39m
+      1 Linear |R| = [32m7.236602e-11[39m
+      2 Linear |R| = [32m6.320565e-13[39m
+      3 Linear |R| = [32m5.447715e-15[39m
+ 2 Nonlinear |R| = [32m5.440831e-15[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m3.838904e-02[39m
+ 1 Secant initialization |R| = [31m3.842664e-02[39m
+ 2 Secant initialization |R| = [32m8.571048e-04[39m
+[35mBeginning fixed point iteration 2[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 7, time = 1.29159, dt = 0.298598
+[36msub0: [39m 0 Nonlinear |R| = [32m1.972946e-04[39m
+[36msub0: [39m      0 Linear |R| = [32m1.972946e-04[39m
+[36msub0: [39m      1 Linear |R| = [32m2.457823e-05[39m
+[36msub0: [39m      2 Linear |R| = [32m5.698713e-07[39m
+[36msub0: [39m      3 Linear |R| = [32m1.098541e-08[39m
+[36msub0: [39m      4 Linear |R| = [32m1.788642e-10[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m1.870152e-10[39m
+[36msub0: [39m      0 Linear |R| = [32m1.870152e-10[39m
+[36msub0: [39m      1 Linear |R| = [32m5.774098e-12[39m
+[36msub0: [39m      2 Linear |R| = [32m1.454013e-13[39m
+[36msub0: [39m      3 Linear |R| = [32m5.332632e-15[39m
+[36msub0: [39m      4 Linear |R| = [32m8.245655e-17[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m1.005455e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.918056e-05[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m1.918056e-05[39m
+      0 Linear |R| = [32m1.918056e-05[39m
+      1 Linear |R| = [32m8.519127e-07[39m
+      2 Linear |R| = [32m4.980266e-09[39m
+      3 Linear |R| = [32m8.317125e-11[39m
+ 1 Nonlinear |R| = [32m8.331189e-11[39m
+      0 Linear |R| = [32m8.331189e-11[39m
+      1 Linear |R| = [32m1.622180e-12[39m
+      2 Linear |R| = [32m1.421143e-14[39m
+      3 Linear |R| = [32m1.211582e-16[39m
+ 2 Nonlinear |R| = [32m1.779434e-16[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m3.838904e-02[39m
+ 1 Secant initialization |R| = [31m3.842664e-02[39m
+ 2 Secant initialization |R| = [32m8.571048e-04[39m
+ 3 Secant step           |R| = [32m1.918056e-05[39m
+[35mBeginning fixed point iteration 3[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 7, time = 1.29159, dt = 0.298598
+[36msub0: [39m 0 Nonlinear |R| = [32m9.904997e-08[39m
+[36msub0: [39m      0 Linear |R| = [32m9.904997e-08[39m
+[36msub0: [39m      1 Linear |R| = [32m1.234779e-08[39m
+[36msub0: [39m      2 Linear |R| = [32m2.747866e-10[39m
+[36msub0: [39m      3 Linear |R| = [32m5.423359e-12[39m
+[36msub0: [39m      4 Linear |R| = [32m8.869346e-14[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m8.735559e-14[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [31m1.960086e-05[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m1.960086e-05[39m
+      0 Linear |R| = [32m1.960086e-05[39m
+      1 Linear |R| = [32m8.706127e-07[39m
+      2 Linear |R| = [32m5.093947e-09[39m
+      3 Linear |R| = [32m8.505455e-11[39m
+ 1 Nonlinear |R| = [32m8.515514e-11[39m
+      0 Linear |R| = [32m8.515514e-11[39m
+      1 Linear |R| = [32m1.657412e-12[39m
+      2 Linear |R| = [32m1.451439e-14[39m
+      3 Linear |R| = [32m1.237066e-16[39m
+ 2 Nonlinear |R| = [32m1.664483e-16[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m3.838904e-02[39m
+ 1 Secant initialization |R| = [31m3.842664e-02[39m
+ 2 Secant initialization |R| = [32m8.571048e-04[39m
+ 3 Secant step           |R| = [32m1.918056e-05[39m
+ 4 Secant step           |R| = [32m1.960086e-05[39m
+[35mBeginning fixed point iteration 4[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 7, time = 1.29159, dt = 0.298598
+[36msub0: [39m 0 Nonlinear |R| = [32m4.615535e-06[39m
+[36msub0: [39m      0 Linear |R| = [32m4.615535e-06[39m
+[36msub0: [39m      1 Linear |R| = [32m5.750999e-07[39m
+[36msub0: [39m      2 Linear |R| = [32m1.326377e-08[39m
+[36msub0: [39m      3 Linear |R| = [32m2.564792e-10[39m
+[36msub0: [39m      4 Linear |R| = [32m4.178033e-12[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m4.336865e-12[39m
+[36msub0: [39m      0 Linear |R| = [32m4.336865e-12[39m
+[36msub0: [39m      1 Linear |R| = [32m1.311396e-13[39m
+[36msub0: [39m      2 Linear |R| = [32m3.208776e-15[39m
+[36msub0: [39m      3 Linear |R| = [32m1.234375e-16[39m
+[36msub0: [39m      4 Linear |R| = [32m2.025242e-18[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m9.865006e-16[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.721302e-08[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m2.721302e-08[39m
+      0 Linear |R| = [32m2.721302e-08[39m
+      1 Linear |R| = [32m1.017162e-09[39m
+      2 Linear |R| = [32m4.681543e-12[39m
+      3 Linear |R| = [32m7.115362e-14[39m
+ 1 Nonlinear |R| = [32m7.114392e-14[39m
+      0 Linear |R| = [32m7.114392e-14[39m
+      1 Linear |R| = [32m1.133354e-15[39m
+      2 Linear |R| = [32m8.505088e-18[39m
+      3 Linear |R| = [32m9.476659e-20[39m
+ 2 Nonlinear |R| = [32m1.016764e-16[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m3.838904e-02[39m
+ 1 Secant initialization |R| = [31m3.842664e-02[39m
+ 2 Secant initialization |R| = [32m8.571048e-04[39m
+ 3 Secant step           |R| = [32m1.918056e-05[39m
+ 4 Secant step           |R| = [32m1.960086e-05[39m
+ 5 Secant step           |R| = [32m2.721302e-08[39m
+[35mBeginning fixed point iteration 5[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 7, time = 1.29159, dt = 0.298598
+[36msub0: [39m 0 Nonlinear |R| = [32m3.700933e-09[39m
+[36msub0: [39m      0 Linear |R| = [32m3.700933e-09[39m
+[36msub0: [39m      1 Linear |R| = [32m2.442420e-10[39m
+[36msub0: [39m      2 Linear |R| = [32m3.355436e-12[39m
+[36msub0: [39m      3 Linear |R| = [32m9.971501e-14[39m
+[36msub0: [39m      4 Linear |R| = [32m1.803661e-15[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m2.193251e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m5.341993e-10[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m5.341993e-10[39m
+      0 Linear |R| = [32m5.341993e-10[39m
+      1 Linear |R| = [32m1.990183e-11[39m
+      2 Linear |R| = [32m9.517749e-14[39m
+      3 Linear |R| = [32m1.379566e-15[39m
+ 1 Nonlinear |R| = [32m1.379836e-15[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m3.838904e-02[39m
+ 1 Secant initialization |R| = [31m3.842664e-02[39m
+ 2 Secant initialization |R| = [32m8.571048e-04[39m
+ 3 Secant step           |R| = [32m1.918056e-05[39m
+ 4 Secant step           |R| = [32m1.960086e-05[39m
+ 5 Secant step           |R| = [32m2.721302e-08[39m
+ 6 Secant step           |R| = [32m5.341993e-10[39m
+[35mBeginning fixed point iteration 6[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 7, time = 1.29159, dt = 0.298598
+[36msub0: [39m 0 Nonlinear |R| = [32m7.097612e-11[39m
+[36msub0: [39m      0 Linear |R| = [32m7.097612e-11[39m
+[36msub0: [39m      1 Linear |R| = [32m4.715088e-12[39m
+[36msub0: [39m      2 Linear |R| = [32m7.896490e-14[39m
+[36msub0: [39m      3 Linear |R| = [32m1.845376e-15[39m
+[36msub0: [39m      4 Linear |R| = [32m3.481753e-17[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m9.764927e-16[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m7.294836e-13[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m7.294836e-13[39m
+      0 Linear |R| = [32m7.294836e-13[39m
+      1 Linear |R| = [32m1.471265e-14[39m
+      2 Linear |R| = [32m1.011485e-16[39m
+      3 Linear |R| = [32m1.819807e-18[39m
+ 1 Nonlinear |R| = [32m1.148746e-16[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m3.838904e-02[39m
+ 1 Secant initialization |R| = [31m3.842664e-02[39m
+ 2 Secant initialization |R| = [32m8.571048e-04[39m
+ 3 Secant step           |R| = [32m1.918056e-05[39m
+ 4 Secant step           |R| = [32m1.960086e-05[39m
+ 5 Secant step           |R| = [32m2.721302e-08[39m
+ 6 Secant step           |R| = [32m5.341993e-10[39m
+ 7 Secant step           |R| = [32m7.294836e-13[39m
+Fixed point convergence reason: CONVERGED_RELATIVE
+
+Postprocessor Values:
++----------------+----------------+
+| time           | unorm          |
++----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |
+|   1.000000e-01 |   2.441319e-01 |
+|   2.200000e-01 |   3.244854e-01 |
+|   3.640000e-01 |   4.019343e-01 |
+|   5.368000e-01 |   4.825929e-01 |
+|   7.441600e-01 |   5.667542e-01 |
+|   9.929920e-01 |   6.520313e-01 |
+|   1.291590e+00 |   7.349474e-01 |
++----------------+----------------+
+
+[36msub0: [39m
+[36msub0: [39mPostprocessor Values:
+[36msub0: [39m+----------------+----------------+
+[36msub0: [39m| time           | vnorm          |
+[36msub0: [39m+----------------+----------------+
+[36msub0: [39m|   0.000000e+00 |   0.000000e+00 |
+[36msub0: [39m|   1.000000e-01 |   5.482190e-01 |
+[36msub0: [39m|   2.200000e-01 |   5.868948e-01 |
+[36msub0: [39m|   3.640000e-01 |   5.967235e-01 |
+[36msub0: [39m|   5.368000e-01 |   6.047535e-01 |
+[36msub0: [39m|   7.441600e-01 |   6.128525e-01 |
+[36msub0: [39m|   9.929920e-01 |   6.208954e-01 |
+[36msub0: [39m|   1.291590e+00 |   6.285917e-01 |
+[36msub0: [39m+----------------+----------------+
+[36msub0: [39m
+ NOT!!!!!!!!!!!!!! _cutback_occurred 
+BaseAdaptiveDT::computeDT()::_adaptive_timestepping 1
+else if (_adaptive_timestepping)
+_allowToShrink 1
+_allowToGrow 1
+_nl_its 1 growth_nl_its 4
+_l_its 3 growth_l_its 100
+
+Time Step 8, time = 1.64991, dt = 0.358318
+[35mInitial fixed point residual norm: [39m3.023223e-02[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 8, time = 1.64991, dt = 0.358318
+[36msub0: [39m 0 Nonlinear |R| = [32m3.062443e-04[39m
+[36msub0: [39m      0 Linear |R| = [32m3.062443e-04[39m
+[36msub0: [39m      1 Linear |R| = [32m3.831628e-05[39m
+[36msub0: [39m      2 Linear |R| = [32m8.945777e-07[39m
+[36msub0: [39m      3 Linear |R| = [32m1.720826e-08[39m
+[36msub0: [39m      4 Linear |R| = [32m2.800492e-10[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m2.922487e-10[39m
+[36msub0: [39m      0 Linear |R| = [32m2.922487e-10[39m
+[36msub0: [39m      1 Linear |R| = [32m8.480852e-12[39m
+[36msub0: [39m      2 Linear |R| = [32m2.272280e-13[39m
+[36msub0: [39m      3 Linear |R| = [32m8.064124e-15[39m
+[36msub0: [39m      4 Linear |R| = [32m1.308306e-16[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m8.161765e-16[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.026214e-02[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m3.026214e-02[39m
+      0 Linear |R| = [32m3.026214e-02[39m
+      1 Linear |R| = [32m1.467822e-03[39m
+      2 Linear |R| = [32m9.874263e-06[39m
+      3 Linear |R| = [32m1.727829e-07[39m
+ 1 Nonlinear |R| = [32m1.728426e-07[39m
+      0 Linear |R| = [32m1.728426e-07[39m
+      1 Linear |R| = [32m3.673904e-09[39m
+      2 Linear |R| = [32m3.580924e-11[39m
+      3 Linear |R| = [32m2.997532e-13[39m
+ 2 Nonlinear |R| = [32m2.995752e-13[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m3.023223e-02[39m
+ 1 Secant initialization |R| = [31m3.026214e-02[39m
+[35mBeginning fixed point iteration 1[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 8, time = 1.64991, dt = 0.358318
+[36msub0: [39m 0 Nonlinear |R| = [32m7.987170e-03[39m
+[36msub0: [39m      0 Linear |R| = [32m7.987170e-03[39m
+[36msub0: [39m      1 Linear |R| = [32m9.987410e-04[39m
+[36msub0: [39m      2 Linear |R| = [32m2.360487e-05[39m
+[36msub0: [39m      3 Linear |R| = [32m4.508035e-07[39m
+[36msub0: [39m      4 Linear |R| = [32m7.327017e-09[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m7.289010e-09[39m
+[36msub0: [39m      0 Linear |R| = [32m7.289010e-09[39m
+[36msub0: [39m      1 Linear |R| = [32m2.260536e-10[39m
+[36msub0: [39m      2 Linear |R| = [32m5.686885e-12[39m
+[36msub0: [39m      3 Linear |R| = [32m2.084645e-13[39m
+[36msub0: [39m      4 Linear |R| = [32m3.187641e-15[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m3.247818e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m7.805057e-04[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m7.805057e-04[39m
+      0 Linear |R| = [32m7.805057e-04[39m
+      1 Linear |R| = [32m3.791487e-05[39m
+      2 Linear |R| = [32m2.604527e-07[39m
+      3 Linear |R| = [32m4.535825e-09[39m
+ 1 Nonlinear |R| = [32m4.524948e-09[39m
+      0 Linear |R| = [32m4.524948e-09[39m
+      1 Linear |R| = [32m9.461820e-11[39m
+      2 Linear |R| = [32m9.436074e-13[39m
+      3 Linear |R| = [32m7.746114e-15[39m
+ 2 Nonlinear |R| = [32m7.740130e-15[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m3.023223e-02[39m
+ 1 Secant initialization |R| = [31m3.026214e-02[39m
+ 2 Secant initialization |R| = [32m7.805057e-04[39m
+[35mBeginning fixed point iteration 2[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 8, time = 1.64991, dt = 0.358318
+[36msub0: [39m 0 Nonlinear |R| = [32m2.061571e-04[39m
+[36msub0: [39m      0 Linear |R| = [32m2.061571e-04[39m
+[36msub0: [39m      1 Linear |R| = [32m2.580041e-05[39m
+[36msub0: [39m      2 Linear |R| = [32m5.982584e-07[39m
+[36msub0: [39m      3 Linear |R| = [32m1.155444e-08[39m
+[36msub0: [39m      4 Linear |R| = [32m1.881716e-10[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m1.856753e-10[39m
+[36msub0: [39m      0 Linear |R| = [32m1.856753e-10[39m
+[36msub0: [39m      1 Linear |R| = [32m6.039045e-12[39m
+[36msub0: [39m      2 Linear |R| = [32m1.495810e-13[39m
+[36msub0: [39m      3 Linear |R| = [32m5.363445e-15[39m
+[36msub0: [39m      4 Linear |R| = [32m8.662977e-17[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m9.612006e-16[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.015185e-05[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m2.015185e-05[39m
+      0 Linear |R| = [32m2.015185e-05[39m
+      1 Linear |R| = [32m9.791372e-07[39m
+      2 Linear |R| = [32m6.743136e-09[39m
+      3 Linear |R| = [32m1.173665e-10[39m
+ 1 Nonlinear |R| = [32m1.175906e-10[39m
+      0 Linear |R| = [32m1.175906e-10[39m
+      1 Linear |R| = [32m2.446320e-12[39m
+      2 Linear |R| = [32m2.444322e-14[39m
+      3 Linear |R| = [32m2.012858e-16[39m
+ 2 Nonlinear |R| = [32m2.333731e-16[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m3.023223e-02[39m
+ 1 Secant initialization |R| = [31m3.026214e-02[39m
+ 2 Secant initialization |R| = [32m7.805057e-04[39m
+ 3 Secant step           |R| = [32m2.015185e-05[39m
+[35mBeginning fixed point iteration 3[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 8, time = 1.64991, dt = 0.358318
+[36msub0: [39m 0 Nonlinear |R| = [32m1.374590e-07[39m
+[36msub0: [39m      0 Linear |R| = [32m1.374590e-07[39m
+[36msub0: [39m      1 Linear |R| = [32m1.721219e-08[39m
+[36msub0: [39m      2 Linear |R| = [32m3.902648e-10[39m
+[36msub0: [39m      3 Linear |R| = [32m7.635974e-12[39m
+[36msub0: [39m      4 Linear |R| = [32m1.246355e-13[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m1.235392e-13[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [31m2.065869e-05[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m2.065869e-05[39m
+      0 Linear |R| = [32m2.065869e-05[39m
+      1 Linear |R| = [32m1.003798e-06[39m
+      2 Linear |R| = [32m6.916254e-09[39m
+      3 Linear |R| = [32m1.203658e-10[39m
+ 1 Nonlinear |R| = [32m1.201572e-10[39m
+      0 Linear |R| = [32m1.201572e-10[39m
+      1 Linear |R| = [32m2.505000e-12[39m
+      2 Linear |R| = [32m2.506399e-14[39m
+      3 Linear |R| = [32m2.056668e-16[39m
+ 2 Nonlinear |R| = [32m2.405641e-16[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m3.023223e-02[39m
+ 1 Secant initialization |R| = [31m3.026214e-02[39m
+ 2 Secant initialization |R| = [32m7.805057e-04[39m
+ 3 Secant step           |R| = [32m2.015185e-05[39m
+ 4 Secant step           |R| = [32m2.065869e-05[39m
+[35mBeginning fixed point iteration 4[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 8, time = 1.64991, dt = 0.358318
+[36msub0: [39m 0 Nonlinear |R| = [32m5.601407e-06[39m
+[36msub0: [39m      0 Linear |R| = [32m5.601407e-06[39m
+[36msub0: [39m      1 Linear |R| = [32m7.010804e-07[39m
+[36msub0: [39m      2 Linear |R| = [32m1.621201e-08[39m
+[36msub0: [39m      3 Linear |R| = [32m3.136135e-10[39m
+[36msub0: [39m      4 Linear |R| = [32m5.108682e-12[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m5.462115e-12[39m
+[36msub0: [39m      0 Linear |R| = [32m5.462115e-12[39m
+[36msub0: [39m      1 Linear |R| = [32m1.666746e-13[39m
+[36msub0: [39m      2 Linear |R| = [32m4.251704e-15[39m
+[36msub0: [39m      3 Linear |R| = [32m1.572598e-16[39m
+[36msub0: [39m      4 Linear |R| = [32m2.451213e-18[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m1.022910e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.914831e-08[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m1.914831e-08[39m
+      0 Linear |R| = [32m1.914831e-08[39m
+      1 Linear |R| = [32m7.801676e-10[39m
+      2 Linear |R| = [32m3.647271e-12[39m
+      3 Linear |R| = [32m6.308401e-14[39m
+ 1 Nonlinear |R| = [32m6.311132e-14[39m
+      0 Linear |R| = [32m6.311132e-14[39m
+      1 Linear |R| = [32m1.050075e-15[39m
+      2 Linear |R| = [32m8.704408e-18[39m
+      3 Linear |R| = [32m1.046792e-19[39m
+ 2 Nonlinear |R| = [32m1.120560e-16[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m3.023223e-02[39m
+ 1 Secant initialization |R| = [31m3.026214e-02[39m
+ 2 Secant initialization |R| = [32m7.805057e-04[39m
+ 3 Secant step           |R| = [32m2.015185e-05[39m
+ 4 Secant step           |R| = [32m2.065869e-05[39m
+ 5 Secant step           |R| = [32m1.914831e-08[39m
+[35mBeginning fixed point iteration 5[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 8, time = 1.64991, dt = 0.358318
+[36msub0: [39m 0 Nonlinear |R| = [32m2.848871e-09[39m
+[36msub0: [39m      0 Linear |R| = [32m2.848871e-09[39m
+[36msub0: [39m      1 Linear |R| = [32m1.893491e-10[39m
+[36msub0: [39m      2 Linear |R| = [32m2.835764e-12[39m
+[36msub0: [39m      3 Linear |R| = [32m7.433481e-14[39m
+[36msub0: [39m      4 Linear |R| = [32m1.260622e-15[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m1.559922e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m4.384621e-10[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m4.384621e-10[39m
+      0 Linear |R| = [32m4.384621e-10[39m
+      1 Linear |R| = [32m1.784800e-11[39m
+      2 Linear |R| = [32m8.478154e-14[39m
+      3 Linear |R| = [32m1.434399e-15[39m
+ 1 Nonlinear |R| = [32m1.447296e-15[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m3.023223e-02[39m
+ 1 Secant initialization |R| = [31m3.026214e-02[39m
+ 2 Secant initialization |R| = [32m7.805057e-04[39m
+ 3 Secant step           |R| = [32m2.015185e-05[39m
+ 4 Secant step           |R| = [32m2.065869e-05[39m
+ 5 Secant step           |R| = [32m1.914831e-08[39m
+ 6 Secant step           |R| = [32m4.384621e-10[39m
+[35mBeginning fixed point iteration 6[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 8, time = 1.64991, dt = 0.358318
+[36msub0: [39m 0 Nonlinear |R| = [32m6.369329e-11[39m
+[36msub0: [39m      0 Linear |R| = [32m6.369329e-11[39m
+[36msub0: [39m      1 Linear |R| = [32m4.252971e-12[39m
+[36msub0: [39m      2 Linear |R| = [32m7.046627e-14[39m
+[36msub0: [39m      3 Linear |R| = [32m1.623936e-15[39m
+[36msub0: [39m      4 Linear |R| = [32m2.815015e-17[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m1.134064e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.854000e-13[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m3.854000e-13[39m
+      0 Linear |R| = [32m3.854000e-13[39m
+      1 Linear |R| = [32m7.989342e-15[39m
+      2 Linear |R| = [32m6.267607e-17[39m
+      3 Linear |R| = [32m1.205737e-18[39m
+ 1 Nonlinear |R| = [32m1.310399e-16[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m3.023223e-02[39m
+ 1 Secant initialization |R| = [31m3.026214e-02[39m
+ 2 Secant initialization |R| = [32m7.805057e-04[39m
+ 3 Secant step           |R| = [32m2.015185e-05[39m
+ 4 Secant step           |R| = [32m2.065869e-05[39m
+ 5 Secant step           |R| = [32m1.914831e-08[39m
+ 6 Secant step           |R| = [32m4.384621e-10[39m
+ 7 Secant step           |R| = [32m3.854000e-13[39m
+Fixed point convergence reason: CONVERGED_RELATIVE
+
+Postprocessor Values:
++----------------+----------------+
+| time           | unorm          |
++----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |
+|   1.000000e-01 |   2.441319e-01 |
+|   2.200000e-01 |   3.244854e-01 |
+|   3.640000e-01 |   4.019343e-01 |
+|   5.368000e-01 |   4.825929e-01 |
+|   7.441600e-01 |   5.667542e-01 |
+|   9.929920e-01 |   6.520313e-01 |
+|   1.291590e+00 |   7.349474e-01 |
+|   1.649908e+00 |   8.118301e-01 |
++----------------+----------------+
+
+[36msub0: [39m
+[36msub0: [39mPostprocessor Values:
+[36msub0: [39m+----------------+----------------+
+[36msub0: [39m| time           | vnorm          |
+[36msub0: [39m+----------------+----------------+
+[36msub0: [39m|   0.000000e+00 |   0.000000e+00 |
+[36msub0: [39m|   1.000000e-01 |   5.482190e-01 |
+[36msub0: [39m|   2.200000e-01 |   5.868948e-01 |
+[36msub0: [39m|   3.640000e-01 |   5.967235e-01 |
+[36msub0: [39m|   5.368000e-01 |   6.047535e-01 |
+[36msub0: [39m|   7.441600e-01 |   6.128525e-01 |
+[36msub0: [39m|   9.929920e-01 |   6.208954e-01 |
+[36msub0: [39m|   1.291590e+00 |   6.285917e-01 |
+[36msub0: [39m|   1.649908e+00 |   6.356438e-01 |
+[36msub0: [39m+----------------+----------------+
+[36msub0: [39m
+ NOT!!!!!!!!!!!!!! _cutback_occurred 
+BaseAdaptiveDT::computeDT()::_adaptive_timestepping 1
+else if (_adaptive_timestepping)
+_allowToShrink 1
+_allowToGrow 1
+_nl_its 1 growth_nl_its 4
+_l_its 3 growth_l_its 100
+
+Time Step 9, time = 2.07989, dt = 0.429982
+[35mInitial fixed point residual norm: [39m2.288118e-02[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 9, time = 2.07989, dt = 0.429982
+[36msub0: [39m 0 Nonlinear |R| = [32m2.319517e-04[39m
+[36msub0: [39m      0 Linear |R| = [32m2.319517e-04[39m
+[36msub0: [39m      1 Linear |R| = [32m2.913532e-05[39m
+[36msub0: [39m      2 Linear |R| = [32m6.788786e-07[39m
+[36msub0: [39m      3 Linear |R| = [32m1.309540e-08[39m
+[36msub0: [39m      4 Linear |R| = [32m2.132070e-10[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m2.135620e-10[39m
+[36msub0: [39m      0 Linear |R| = [32m2.135620e-10[39m
+[36msub0: [39m      1 Linear |R| = [32m6.662441e-12[39m
+[36msub0: [39m      2 Linear |R| = [32m1.680659e-13[39m
+[36msub0: [39m      3 Linear |R| = [32m6.189712e-15[39m
+[36msub0: [39m      4 Linear |R| = [32m1.008392e-16[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m9.351521e-16[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.290395e-02[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m2.290395e-02[39m
+      0 Linear |R| = [32m2.290395e-02[39m
+      1 Linear |R| = [32m1.211480e-03[39m
+      2 Linear |R| = [32m9.646455e-06[39m
+      3 Linear |R| = [32m1.734748e-07[39m
+ 1 Nonlinear |R| = [32m1.735268e-07[39m
+      0 Linear |R| = [32m1.735268e-07[39m
+      1 Linear |R| = [32m3.866952e-09[39m
+      2 Linear |R| = [32m4.359439e-11[39m
+      3 Linear |R| = [32m3.532430e-13[39m
+ 2 Nonlinear |R| = [32m3.532948e-13[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m2.288118e-02[39m
+ 1 Secant initialization |R| = [31m2.290395e-02[39m
+[35mBeginning fixed point iteration 1[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 9, time = 2.07989, dt = 0.429982
+[36msub0: [39m 0 Nonlinear |R| = [32m6.895543e-03[39m
+[36msub0: [39m      0 Linear |R| = [32m6.895543e-03[39m
+[36msub0: [39m      1 Linear |R| = [32m8.659330e-04[39m
+[36msub0: [39m      2 Linear |R| = [32m2.029889e-05[39m
+[36msub0: [39m      3 Linear |R| = [32m3.901744e-07[39m
+[36msub0: [39m      4 Linear |R| = [32m6.348712e-09[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m6.253184e-09[39m
+[36msub0: [39m      0 Linear |R| = [32m6.253184e-09[39m
+[36msub0: [39m      1 Linear |R| = [32m1.929898e-10[39m
+[36msub0: [39m      2 Linear |R| = [32m5.377310e-12[39m
+[36msub0: [39m      3 Linear |R| = [32m1.798505e-13[39m
+[36msub0: [39m      4 Linear |R| = [32m2.972263e-15[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m3.086969e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m6.770673e-04[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m6.770673e-04[39m
+      0 Linear |R| = [32m6.770673e-04[39m
+      1 Linear |R| = [32m3.584767e-05[39m
+      2 Linear |R| = [32m2.878020e-07[39m
+      3 Linear |R| = [32m5.162939e-09[39m
+ 1 Nonlinear |R| = [32m5.157404e-09[39m
+      0 Linear |R| = [32m5.157404e-09[39m
+      1 Linear |R| = [32m1.137332e-10[39m
+      2 Linear |R| = [32m1.301010e-12[39m
+      3 Linear |R| = [32m1.056125e-14[39m
+ 2 Nonlinear |R| = [32m1.058721e-14[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m2.288118e-02[39m
+ 1 Secant initialization |R| = [31m2.290395e-02[39m
+ 2 Secant initialization |R| = [32m6.770673e-04[39m
+[35mBeginning fixed point iteration 2[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 9, time = 2.07989, dt = 0.429982
+[36msub0: [39m 0 Nonlinear |R| = [32m2.038870e-04[39m
+[36msub0: [39m      0 Linear |R| = [32m2.038870e-04[39m
+[36msub0: [39m      1 Linear |R| = [32m2.561372e-05[39m
+[36msub0: [39m      2 Linear |R| = [32m5.944772e-07[39m
+[36msub0: [39m      3 Linear |R| = [32m1.149383e-08[39m
+[36msub0: [39m      4 Linear |R| = [32m1.872035e-10[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m1.882752e-10[39m
+[36msub0: [39m      0 Linear |R| = [32m1.882752e-10[39m
+[36msub0: [39m      1 Linear |R| = [32m5.848371e-12[39m
+[36msub0: [39m      2 Linear |R| = [32m1.399470e-13[39m
+[36msub0: [39m      3 Linear |R| = [32m5.330092e-15[39m
+[36msub0: [39m      4 Linear |R| = [32m8.618009e-17[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m1.013603e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.002106e-05[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m2.002106e-05[39m
+      0 Linear |R| = [32m2.002106e-05[39m
+      1 Linear |R| = [32m1.060160e-06[39m
+      2 Linear |R| = [32m8.519685e-09[39m
+      3 Linear |R| = [32m1.527936e-10[39m
+ 1 Nonlinear |R| = [32m1.527907e-10[39m
+      0 Linear |R| = [32m1.527907e-10[39m
+      1 Linear |R| = [32m3.362400e-12[39m
+      2 Linear |R| = [32m3.850578e-14[39m
+      3 Linear |R| = [32m3.120990e-16[39m
+ 2 Nonlinear |R| = [32m3.634798e-16[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m2.288118e-02[39m
+ 1 Secant initialization |R| = [31m2.290395e-02[39m
+ 2 Secant initialization |R| = [32m6.770673e-04[39m
+ 3 Secant step           |R| = [32m2.002106e-05[39m
+[35mBeginning fixed point iteration 3[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 9, time = 2.07989, dt = 0.429982
+[36msub0: [39m 0 Nonlinear |R| = [32m1.781645e-07[39m
+[36msub0: [39m      0 Linear |R| = [32m1.781645e-07[39m
+[36msub0: [39m      1 Linear |R| = [32m2.238955e-08[39m
+[36msub0: [39m      2 Linear |R| = [32m5.137390e-10[39m
+[36msub0: [39m      3 Linear |R| = [32m9.999264e-12[39m
+[36msub0: [39m      4 Linear |R| = [32m1.630390e-13[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m1.776867e-13[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [31m2.059518e-05[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m2.059518e-05[39m
+      0 Linear |R| = [32m2.059518e-05[39m
+      1 Linear |R| = [32m1.090589e-06[39m
+      2 Linear |R| = [32m8.766136e-09[39m
+      3 Linear |R| = [32m1.572029e-10[39m
+ 1 Nonlinear |R| = [32m1.571253e-10[39m
+      0 Linear |R| = [32m1.571253e-10[39m
+      1 Linear |R| = [32m3.465204e-12[39m
+      2 Linear |R| = [32m3.964043e-14[39m
+      3 Linear |R| = [32m3.210864e-16[39m
+ 2 Nonlinear |R| = [32m3.736411e-16[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m2.288118e-02[39m
+ 1 Secant initialization |R| = [31m2.290395e-02[39m
+ 2 Secant initialization |R| = [32m6.770673e-04[39m
+ 3 Secant step           |R| = [32m2.002106e-05[39m
+ 4 Secant step           |R| = [32m2.059518e-05[39m
+[35mBeginning fixed point iteration 4[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 9, time = 2.07989, dt = 0.429982
+[36msub0: [39m 0 Nonlinear |R| = [32m6.390905e-06[39m
+[36msub0: [39m      0 Linear |R| = [32m6.390905e-06[39m
+[36msub0: [39m      1 Linear |R| = [32m8.029072e-07[39m
+[36msub0: [39m      2 Linear |R| = [32m1.861021e-08[39m
+[36msub0: [39m      3 Linear |R| = [32m3.600962e-10[39m
+[36msub0: [39m      4 Linear |R| = [32m5.865694e-12[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m5.872320e-12[39m
+[36msub0: [39m      0 Linear |R| = [32m5.872320e-12[39m
+[36msub0: [39m      1 Linear |R| = [32m1.856550e-13[39m
+[36msub0: [39m      2 Linear |R| = [32m4.958332e-15[39m
+[36msub0: [39m      3 Linear |R| = [32m1.735263e-16[39m
+[36msub0: [39m      4 Linear |R| = [32m2.699825e-18[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m1.058643e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.198826e-08[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m1.198826e-08[39m
+      0 Linear |R| = [32m1.198826e-08[39m
+      1 Linear |R| = [32m5.246235e-10[39m
+      2 Linear |R| = [32m2.634147e-12[39m
+      3 Linear |R| = [32m4.899003e-14[39m
+ 1 Nonlinear |R| = [32m4.890569e-14[39m
+      0 Linear |R| = [32m4.890569e-14[39m
+      1 Linear |R| = [32m8.277046e-16[39m
+      2 Linear |R| = [32m8.088320e-18[39m
+      3 Linear |R| = [32m1.017081e-19[39m
+ 2 Nonlinear |R| = [32m1.498646e-16[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m2.288118e-02[39m
+ 1 Secant initialization |R| = [31m2.290395e-02[39m
+ 2 Secant initialization |R| = [32m6.770673e-04[39m
+ 3 Secant step           |R| = [32m2.002106e-05[39m
+ 4 Secant step           |R| = [32m2.059518e-05[39m
+ 5 Secant step           |R| = [32m1.198826e-08[39m
+[35mBeginning fixed point iteration 5[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 9, time = 2.07989, dt = 0.429982
+[36msub0: [39m 0 Nonlinear |R| = [32m1.926113e-09[39m
+[36msub0: [39m      0 Linear |R| = [32m1.926113e-09[39m
+[36msub0: [39m      1 Linear |R| = [32m1.285866e-10[39m
+[36msub0: [39m      2 Linear |R| = [32m2.021122e-12[39m
+[36msub0: [39m      3 Linear |R| = [32m4.943852e-14[39m
+[36msub0: [39m      4 Linear |R| = [32m8.044765e-16[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m1.266144e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m3.184207e-10[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m3.184207e-10[39m
+      0 Linear |R| = [32m3.184207e-10[39m
+      1 Linear |R| = [32m1.393192e-11[39m
+      2 Linear |R| = [32m7.038571e-14[39m
+      3 Linear |R| = [32m1.296447e-15[39m
+ 1 Nonlinear |R| = [32m1.264321e-15[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m2.288118e-02[39m
+ 1 Secant initialization |R| = [31m2.290395e-02[39m
+ 2 Secant initialization |R| = [32m6.770673e-04[39m
+ 3 Secant step           |R| = [32m2.002106e-05[39m
+ 4 Secant step           |R| = [32m2.059518e-05[39m
+ 5 Secant step           |R| = [32m1.198826e-08[39m
+ 6 Secant step           |R| = [32m3.184207e-10[39m
+[35mBeginning fixed point iteration 6[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 9, time = 2.07989, dt = 0.429982
+[36msub0: [39m 0 Nonlinear |R| = [32m4.981739e-11[39m
+[36msub0: [39m      0 Linear |R| = [32m4.981739e-11[39m
+[36msub0: [39m      1 Linear |R| = [32m3.334651e-12[39m
+[36msub0: [39m      2 Linear |R| = [32m5.507456e-14[39m
+[36msub0: [39m      3 Linear |R| = [32m1.262578e-15[39m
+[36msub0: [39m      4 Linear |R| = [32m2.074555e-17[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m1.028469e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.615627e-13[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m1.615627e-13[39m
+      0 Linear |R| = [32m1.615627e-13[39m
+      1 Linear |R| = [32m3.489299e-15[39m
+      2 Linear |R| = [32m3.157303e-17[39m
+      3 Linear |R| = [32m6.360074e-19[39m
+ 1 Nonlinear |R| = [32m2.065764e-16[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m2.288118e-02[39m
+ 1 Secant initialization |R| = [31m2.290395e-02[39m
+ 2 Secant initialization |R| = [32m6.770673e-04[39m
+ 3 Secant step           |R| = [32m2.002106e-05[39m
+ 4 Secant step           |R| = [32m2.059518e-05[39m
+ 5 Secant step           |R| = [32m1.198826e-08[39m
+ 6 Secant step           |R| = [32m3.184207e-10[39m
+ 7 Secant step           |R| = [32m1.615627e-13[39m
+Fixed point convergence reason: CONVERGED_RELATIVE
+
+Postprocessor Values:
++----------------+----------------+
+| time           | unorm          |
++----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |
+|   1.000000e-01 |   2.441319e-01 |
+|   2.200000e-01 |   3.244854e-01 |
+|   3.640000e-01 |   4.019343e-01 |
+|   5.368000e-01 |   4.825929e-01 |
+|   7.441600e-01 |   5.667542e-01 |
+|   9.929920e-01 |   6.520313e-01 |
+|   1.291590e+00 |   7.349474e-01 |
+|   1.649908e+00 |   8.118301e-01 |
+|   2.079890e+00 |   8.794606e-01 |
++----------------+----------------+
+
+[36msub0: [39m
+[36msub0: [39mPostprocessor Values:
+[36msub0: [39m+----------------+----------------+
+[36msub0: [39m| time           | vnorm          |
+[36msub0: [39m+----------------+----------------+
+[36msub0: [39m|   0.000000e+00 |   0.000000e+00 |
+[36msub0: [39m|   1.000000e-01 |   5.482190e-01 |
+[36msub0: [39m|   2.200000e-01 |   5.868948e-01 |
+[36msub0: [39m|   3.640000e-01 |   5.967235e-01 |
+[36msub0: [39m|   5.368000e-01 |   6.047535e-01 |
+[36msub0: [39m|   7.441600e-01 |   6.128525e-01 |
+[36msub0: [39m|   9.929920e-01 |   6.208954e-01 |
+[36msub0: [39m|   1.291590e+00 |   6.285917e-01 |
+[36msub0: [39m|   1.649908e+00 |   6.356438e-01 |
+[36msub0: [39m|   2.079890e+00 |   6.417954e-01 |
+[36msub0: [39m+----------------+----------------+
+[36msub0: [39m
+ NOT!!!!!!!!!!!!!! _cutback_occurred 
+BaseAdaptiveDT::computeDT()::_adaptive_timestepping 1
+else if (_adaptive_timestepping)
+_allowToShrink 1
+_allowToGrow 1
+_nl_its 1 growth_nl_its 4
+_l_its 3 growth_l_its 100
+
+Time Step 10, time = 2.59587, dt = 0.515978
+[35mInitial fixed point residual norm: [39m1.652542e-02[39m
+
+[35mBeginning fixed point iteration 0[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 10, time = 2.59587, dt = 0.515978
+[36msub0: [39m 0 Nonlinear |R| = [32m1.675594e-04[39m
+[36msub0: [39m      0 Linear |R| = [32m1.675594e-04[39m
+[36msub0: [39m      1 Linear |R| = [32m2.111533e-05[39m
+[36msub0: [39m      2 Linear |R| = [32m4.917398e-07[39m
+[36msub0: [39m      3 Linear |R| = [32m9.501400e-09[39m
+[36msub0: [39m      4 Linear |R| = [32m1.547265e-10[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m1.596693e-10[39m
+[36msub0: [39m      0 Linear |R| = [32m1.596693e-10[39m
+[36msub0: [39m      1 Linear |R| = [32m4.741601e-12[39m
+[36msub0: [39m      2 Linear |R| = [32m1.236586e-13[39m
+[36msub0: [39m      3 Linear |R| = [32m4.512460e-15[39m
+[36msub0: [39m      4 Linear |R| = [32m7.362852e-17[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m1.284203e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.654194e-02[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m1.654194e-02[39m
+      0 Linear |R| = [32m1.654194e-02[39m
+      1 Linear |R| = [32m9.505629e-04[39m
+      2 Linear |R| = [32m8.790247e-06[39m
+      3 Linear |R| = [32m1.611593e-07[39m
+ 1 Nonlinear |R| = [32m1.610067e-07[39m
+      0 Linear |R| = [32m1.610067e-07[39m
+      1 Linear |R| = [32m3.728815e-09[39m
+      2 Linear |R| = [32m4.823988e-11[39m
+      3 Linear |R| = [32m4.042943e-13[39m
+ 2 Nonlinear |R| = [32m4.045360e-13[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m1.652542e-02[39m
+ 1 Secant initialization |R| = [31m1.654194e-02[39m
+[35mBeginning fixed point iteration 1[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 10, time = 2.59587, dt = 0.515978
+[36msub0: [39m 0 Nonlinear |R| = [32m5.639261e-03[39m
+[36msub0: [39m      0 Linear |R| = [32m5.639261e-03[39m
+[36msub0: [39m      1 Linear |R| = [32m7.105715e-04[39m
+[36msub0: [39m      2 Linear |R| = [32m1.659327e-05[39m
+[36msub0: [39m      3 Linear |R| = [32m3.201003e-07[39m
+[36msub0: [39m      4 Linear |R| = [32m5.211359e-09[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m5.492990e-09[39m
+[36msub0: [39m      0 Linear |R| = [32m5.492990e-09[39m
+[36msub0: [39m      1 Linear |R| = [32m1.679530e-10[39m
+[36msub0: [39m      2 Linear |R| = [32m4.439974e-12[39m
+[36msub0: [39m      3 Linear |R| = [32m1.599281e-13[39m
+[36msub0: [39m      4 Linear |R| = [32m2.516861e-15[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m2.756351e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m5.558642e-04[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m5.558642e-04[39m
+      0 Linear |R| = [32m5.558642e-04[39m
+      1 Linear |R| = [32m3.195975e-05[39m
+      2 Linear |R| = [32m2.962940e-07[39m
+      3 Linear |R| = [32m5.426926e-09[39m
+ 1 Nonlinear |R| = [32m5.444095e-09[39m
+      0 Linear |R| = [32m5.444095e-09[39m
+      1 Linear |R| = [32m1.250997e-10[39m
+      2 Linear |R| = [32m1.626494e-12[39m
+      3 Linear |R| = [32m1.363151e-14[39m
+ 2 Nonlinear |R| = [32m1.363887e-14[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m1.652542e-02[39m
+ 1 Secant initialization |R| = [31m1.654194e-02[39m
+ 2 Secant initialization |R| = [32m5.558642e-04[39m
+[35mBeginning fixed point iteration 2[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 10, time = 2.59587, dt = 0.515978
+[36msub0: [39m 0 Nonlinear |R| = [32m1.895095e-04[39m
+[36msub0: [39m      0 Linear |R| = [32m1.895095e-04[39m
+[36msub0: [39m      1 Linear |R| = [32m2.388311e-05[39m
+[36msub0: [39m      2 Linear |R| = [32m5.550327e-07[39m
+[36msub0: [39m      3 Linear |R| = [32m1.073755e-08[39m
+[36msub0: [39m      4 Linear |R| = [32m1.748911e-10[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m1.832844e-10[39m
+[36msub0: [39m      0 Linear |R| = [32m1.832844e-10[39m
+[36msub0: [39m      1 Linear |R| = [32m5.566179e-12[39m
+[36msub0: [39m      2 Linear |R| = [32m1.499101e-13[39m
+[36msub0: [39m      3 Linear |R| = [32m5.353387e-15[39m
+[36msub0: [39m      4 Linear |R| = [32m8.809094e-17[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m1.023227e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m1.868036e-05[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m1.868036e-05[39m
+      0 Linear |R| = [32m1.868036e-05[39m
+      1 Linear |R| = [32m1.074111e-06[39m
+      2 Linear |R| = [32m9.960731e-09[39m
+      3 Linear |R| = [32m1.824219e-10[39m
+ 1 Nonlinear |R| = [32m1.819997e-10[39m
+      0 Linear |R| = [32m1.819997e-10[39m
+      1 Linear |R| = [32m4.187227e-12[39m
+      2 Linear |R| = [32m5.455556e-14[39m
+      3 Linear |R| = [32m4.566402e-16[39m
+ 2 Nonlinear |R| = [32m4.776393e-16[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m1.652542e-02[39m
+ 1 Secant initialization |R| = [31m1.654194e-02[39m
+ 2 Secant initialization |R| = [32m5.558642e-04[39m
+ 3 Secant step           |R| = [32m1.868036e-05[39m
+[35mBeginning fixed point iteration 3[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 10, time = 2.59587, dt = 0.515978
+[36msub0: [39m 0 Nonlinear |R| = [32m2.137946e-07[39m
+[36msub0: [39m      0 Linear |R| = [32m2.137946e-07[39m
+[36msub0: [39m      1 Linear |R| = [32m2.694818e-08[39m
+[36msub0: [39m      2 Linear |R| = [32m6.228590e-10[39m
+[36msub0: [39m      3 Linear |R| = [32m1.208822e-11[39m
+[36msub0: [39m      4 Linear |R| = [32m1.969905e-13[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m2.073119e-13[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [31m1.928637e-05[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m1.928637e-05[39m
+      0 Linear |R| = [32m1.928637e-05[39m
+      1 Linear |R| = [32m1.108975e-06[39m
+      2 Linear |R| = [32m1.028484e-08[39m
+      3 Linear |R| = [32m1.883518e-10[39m
+ 1 Nonlinear |R| = [32m1.884449e-10[39m
+      0 Linear |R| = [32m1.884449e-10[39m
+      1 Linear |R| = [32m4.331253e-12[39m
+      2 Linear |R| = [32m5.650354e-14[39m
+      3 Linear |R| = [32m4.722984e-16[39m
+ 2 Nonlinear |R| = [32m5.095804e-16[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m1.652542e-02[39m
+ 1 Secant initialization |R| = [31m1.654194e-02[39m
+ 2 Secant initialization |R| = [32m5.558642e-04[39m
+ 3 Secant step           |R| = [32m1.868036e-05[39m
+ 4 Secant step           |R| = [32m1.928637e-05[39m
+[35mBeginning fixed point iteration 4[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 10, time = 2.59587, dt = 0.515978
+[36msub0: [39m 0 Nonlinear |R| = [32m6.803921e-06[39m
+[36msub0: [39m      0 Linear |R| = [32m6.803921e-06[39m
+[36msub0: [39m      1 Linear |R| = [32m8.574880e-07[39m
+[36msub0: [39m      2 Linear |R| = [32m1.991572e-08[39m
+[36msub0: [39m      3 Linear |R| = [32m3.854208e-10[39m
+[36msub0: [39m      4 Linear |R| = [32m6.277999e-12[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m6.843196e-12[39m
+[36msub0: [39m      0 Linear |R| = [32m6.843196e-12[39m
+[36msub0: [39m      1 Linear |R| = [32m2.031291e-13[39m
+[36msub0: [39m      2 Linear |R| = [32m5.352316e-15[39m
+[36msub0: [39m      3 Linear |R| = [32m1.982414e-16[39m
+[36msub0: [39m      4 Linear |R| = [32m3.262632e-18[39m
+[36msub0: [39m 2 Nonlinear |R| = [32m1.016377e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m6.574305e-09[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m6.574305e-09[39m
+      0 Linear |R| = [32m6.574305e-09[39m
+      1 Linear |R| = [32m3.058173e-10[39m
+      2 Linear |R| = [32m1.702237e-12[39m
+      3 Linear |R| = [32m3.288418e-14[39m
+ 1 Nonlinear |R| = [32m3.279946e-14[39m
+      0 Linear |R| = [32m3.279946e-14[39m
+      1 Linear |R| = [32m5.495545e-16[39m
+      2 Linear |R| = [32m6.560145e-18[39m
+      3 Linear |R| = [32m8.439134e-20[39m
+ 2 Nonlinear |R| = [32m1.869455e-16[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m1.652542e-02[39m
+ 1 Secant initialization |R| = [31m1.654194e-02[39m
+ 2 Secant initialization |R| = [32m5.558642e-04[39m
+ 3 Secant step           |R| = [32m1.868036e-05[39m
+ 4 Secant step           |R| = [32m1.928637e-05[39m
+ 5 Secant step           |R| = [32m6.574305e-09[39m
+[35mBeginning fixed point iteration 5[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 10, time = 2.59587, dt = 0.515978
+[36msub0: [39m 0 Nonlinear |R| = [32m1.130081e-09[39m
+[36msub0: [39m      0 Linear |R| = [32m1.130081e-09[39m
+[36msub0: [39m      1 Linear |R| = [32m7.565048e-11[39m
+[36msub0: [39m      2 Linear |R| = [32m1.220959e-12[39m
+[36msub0: [39m      3 Linear |R| = [32m2.881793e-14[39m
+[36msub0: [39m      4 Linear |R| = [32m4.582895e-16[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m1.104480e-15[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m2.010598e-10[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m2.010598e-10[39m
+      0 Linear |R| = [32m2.010598e-10[39m
+      1 Linear |R| = [32m9.352667e-12[39m
+      2 Linear |R| = [32m5.219547e-14[39m
+      3 Linear |R| = [32m1.003891e-15[39m
+ 1 Nonlinear |R| = [32m1.049380e-15[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m1.652542e-02[39m
+ 1 Secant initialization |R| = [31m1.654194e-02[39m
+ 2 Secant initialization |R| = [32m5.558642e-04[39m
+ 3 Secant step           |R| = [32m1.868036e-05[39m
+ 4 Secant step           |R| = [32m1.928637e-05[39m
+ 5 Secant step           |R| = [32m6.574305e-09[39m
+ 6 Secant step           |R| = [32m2.010598e-10[39m
+[35mBeginning fixed point iteration 6[39m
+
+[36msub0: [39m
+[36msub0: [39mTime Step 10, time = 2.59587, dt = 0.515978
+[36msub0: [39m 0 Nonlinear |R| = [32m3.353188e-11[39m
+[36msub0: [39m      0 Linear |R| = [32m3.353188e-11[39m
+[36msub0: [39m      1 Linear |R| = [32m2.247738e-12[39m
+[36msub0: [39m      2 Linear |R| = [32m3.712531e-14[39m
+[36msub0: [39m      3 Linear |R| = [32m8.497645e-16[39m
+[36msub0: [39m      4 Linear |R| = [32m1.356956e-17[39m
+[36msub0: [39m 1 Nonlinear |R| = [32m9.238041e-16[39m
+[36msub0: [39m[32m Solve Converged![39m
+[35mFixed point residual norm after TIMESTEP_BEGIN MultiApps: [32m5.268908e-14[39m
+[35m
+Main app solve:[39m
+ 0 Nonlinear |R| = [32m5.268908e-14[39m
+      0 Linear |R| = [32m5.268908e-14[39m
+      1 Linear |R| = [32m1.211499e-15[39m
+      2 Linear |R| = [32m1.258103e-17[39m
+      3 Linear |R| = [32m2.603722e-19[39m
+ 1 Nonlinear |R| = [32m1.689897e-16[39m
+[32m Solve Converged![39m
+
+ 0 Secant initialization |R| = [32m1.652542e-02[39m
+ 1 Secant initialization |R| = [31m1.654194e-02[39m
+ 2 Secant initialization |R| = [32m5.558642e-04[39m
+ 3 Secant step           |R| = [32m1.868036e-05[39m
+ 4 Secant step           |R| = [32m1.928637e-05[39m
+ 5 Secant step           |R| = [32m6.574305e-09[39m
+ 6 Secant step           |R| = [32m2.010598e-10[39m
+ 7 Secant step           |R| = [32m5.268908e-14[39m
+Fixed point convergence reason: CONVERGED_RELATIVE
+
+Postprocessor Values:
++----------------+----------------+
+| time           | unorm          |
++----------------+----------------+
+|   0.000000e+00 |   0.000000e+00 |
+|   1.000000e-01 |   2.441319e-01 |
+|   2.200000e-01 |   3.244854e-01 |
+|   3.640000e-01 |   4.019343e-01 |
+|   5.368000e-01 |   4.825929e-01 |
+|   7.441600e-01 |   5.667542e-01 |
+|   9.929920e-01 |   6.520313e-01 |
+|   1.291590e+00 |   7.349474e-01 |
+|   1.649908e+00 |   8.118301e-01 |
+|   2.079890e+00 |   8.794606e-01 |
+|   2.595868e+00 |   9.355881e-01 |
++----------------+----------------+
+
+[36msub0: [39m
+[36msub0: [39mPostprocessor Values:
+[36msub0: [39m+----------------+----------------+
+[36msub0: [39m| time           | vnorm          |
+[36msub0: [39m+----------------+----------------+
+[36msub0: [39m|   0.000000e+00 |   0.000000e+00 |
+[36msub0: [39m|   1.000000e-01 |   5.482190e-01 |
+[36msub0: [39m|   2.200000e-01 |   5.868948e-01 |
+[36msub0: [39m|   3.640000e-01 |   5.967235e-01 |
+[36msub0: [39m|   5.368000e-01 |   6.047535e-01 |
+[36msub0: [39m|   7.441600e-01 |   6.128525e-01 |
+[36msub0: [39m|   9.929920e-01 |   6.208954e-01 |
+[36msub0: [39m|   1.291590e+00 |   6.285917e-01 |
+[36msub0: [39m|   1.649908e+00 |   6.356438e-01 |
+[36msub0: [39m|   2.079890e+00 |   6.417954e-01 |
+[36msub0: [39m|   2.595868e+00 |   6.468716e-01 |
+[36msub0: [39m+----------------+----------------+
+[36msub0: [39m
+Finished Executing                                                                       [[33m 17.57 s[39m] [[33m    5 MB[39m]
+
+ ---------------------------------------------------------------------------- 
+| Reference count information                                                |
+ ---------------------------------------------------------------------------- 
+| N7libMesh10FEAbstractE reference count information:
+|  Creations:    34
+|  Destructions: 34
+| N7libMesh10Parameters5ValueE reference count information:
+|  Creations:    112243
+|  Destructions: 112243
+| N7libMesh12SparseMatrixIdEE reference count information:
+|  Creations:    442
+|  Destructions: 442
+| N7libMesh13NumericVectorIdEE reference count information:
+|  Creations:    4929
+|  Destructions: 4929
+| N7libMesh15EquationSystemsE reference count information:
+|  Creations:    2
+|  Destructions: 2
+| N7libMesh15GhostingFunctorE reference count information:
+|  Creations:    34
+|  Destructions: 34
+| N7libMesh15NonlinearSolverIdEE reference count information:
+|  Creations:    2
+|  Destructions: 2
+| N7libMesh4ElemE reference count information:
+|  Creations:    264
+|  Destructions: 264
+| N7libMesh4NodeE reference count information:
+|  Creations:    242
+|  Destructions: 242
+| N7libMesh5QBaseE reference count information:
+|  Creations:    40
+|  Destructions: 40
+| N7libMesh6DofMapE reference count information:
+|  Creations:    4
+|  Destructions: 4
+| N7libMesh6SystemE reference count information:
+|  Creations:    4
+|  Destructions: 4
+| N7libMesh9DofObjectE reference count information:
+|  Creations:    506
+|  Destructions: 506
+ ---------------------------------------------------------------------------- 

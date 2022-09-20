@@ -52,9 +52,14 @@ public:
   virtual void estimateTimeError();
 
   /**
-   * @return The the computed dt to use for this timestep.
+   * @return The computed dt to use for this timestep.
    */
   virtual Real getDT();
+
+  /**
+   * @return The predicted next dt to use for this timestep.
+   */
+  virtual Real getNextDT();
 
   /**
    * Transient loop will continue as long as this keeps returning true.
@@ -71,6 +76,8 @@ public:
   virtual void postExecute() override;
 
   virtual void computeDT();
+
+  virtual void computeNextDT(bool called_postSolve);
 
   virtual void preStep();
 
@@ -282,7 +289,9 @@ protected:
   Real _start_time;
   Real _timestep_tolerance;
   Real & _target_time;
-  bool _use_multiapp_dt;
+  bool _min_multiapp_dt;
+  bool _max_multiapp_dt;
+  bool _max_multiapp_next_dt;
 
   Real & _solution_change_norm;
 

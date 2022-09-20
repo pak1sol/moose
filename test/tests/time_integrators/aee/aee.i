@@ -9,6 +9,12 @@
 
 []
 
+[Postprocessors]
+  [_dt]
+    type = TimestepSize
+  []
+[]
+
 #still need BC for Energy, IC's for both.
 [Variables]
   active = 'Time'

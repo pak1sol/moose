@@ -57,6 +57,9 @@
     type = ElementAverageValue
     variable = v
   []
+  [_dt]
+    type = TimestepSize
+  []
 []
 
 [Executioner]
@@ -65,9 +68,16 @@
   petsc_options_iname = '-pc_type -pc_hypre_type'
   petsc_options_value = 'hypre boomeramg'
   [TimeStepper]
-    type = IterationAdaptiveDT
+    type = PIDAdaptiveDT
     dt = 1e-6
-    optimal_iterations = 6
+    local_error_order = 2
+    tolerance = 0.01
+    K_integral = 0.05
+    K_proportional = 0.05
+    K_derivative = 0.05
+  # type = IterationAdaptiveDT
+  # dt = 1e-6
+  # optimal_iterations = 6
   []
   end_time = 1000
   nl_abs_tol = 1e-8

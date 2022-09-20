@@ -65,6 +65,8 @@ MultiAppPostprocessorTransfer::execute()
 {
   TIME_SECTION("MultiAppPostprocessorTransfer::execute()", 5, "Transferring a postprocessor");
 
+  _console << "MultiAppPostprocessorTransfer::execute() _current_direction " << _current_direction << std::endl;
+
   switch (_current_direction)
   {
     case BETWEEN_MULTIAPP:

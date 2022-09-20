@@ -387,7 +387,9 @@ TransientMultiApp::solveStep(Real dt, Real target_time, bool auto_advance)
         // Note: if we turn off the output for all time steps for sub-cycling, we still need to
         // have one output at the end.
         if ((!at_steady && _detect_steady_state) || !_output_sub_cycles)
+        {
           problem.outputStep(EXEC_FORCED);
+        }
 
       } // sub_cycling
       else if (_tolerate_failure)
@@ -570,6 +572,7 @@ TransientMultiApp::incrementTStep(Real target_time)
 
       // Only increment the step if we are after (target_time) the
       // start_time (added to app_time_offset) of this sub_app.
+      _console << "_apps[" << i << "]->getStartTime() " << _apps[i]->getStartTime() << std::endl;
       if (_apps[i]->getStartTime() + app_time_offset < target_time)
         ex->incrementStepOrReject();
     }
@@ -604,7 +607,7 @@ TransientMultiApp::needsRestoration()
 }
 
 Real
-TransientMultiApp::computeDT()
+TransientMultiApp::computeDT_min()
 {
   if (_sub_cycling) // Bow out of the timestep selection dance
     return std::numeric_limits<Real>::max();
@@ -632,6 +635,42 @@ TransientMultiApp::computeDT()
 
   _communicator.min(smallest_dt);
   return smallest_dt;
+}
+
+Real
+TransientMultiApp::computeDT_max(bool isnext)
+{
+  // no restriction from sub-cycling
+
+  Real maximum_dt = 0.;
+
+  if (_has_an_app)
+  {
+    Moose::ScopedCommSwapper swapper(_my_comm);
+
+    for (unsigned int i = 0; i < _my_num_apps; i++)
+    {
+      Transient * ex = _transient_executioners[i];
+      Real dt;
+      if (isnext)
+      {
+        ex->computeNextDT(false);
+        dt = ex->getNextDT();
+      }
+      else
+      {
+        ex->computeDT();
+        dt = ex->getDT();
+      }
+
+      maximum_dt = std::max(dt, maximum_dt);
+    }
+  }
+
+  // For _tolerate_failure, just make it force to fast-forward to current time. No problem.
+
+  _communicator.max(maximum_dt);
+  return maximum_dt;
 }
 
 void

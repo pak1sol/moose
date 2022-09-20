@@ -52,7 +52,8 @@ TimeStepper::TimeStepper(const InputParameters & parameters)
     _reset_dt(getParam<bool>("reset_dt")),
     _has_reset_dt(false),
     _failure_count(0),
-    _current_dt(declareRestartableData<Real>("current_dt", 1.0))
+    _current_dt(declareRestartableData<Real>("current_dt", 1.0)),
+    _next_dt(declareRestartableData<Real>("next_dt", 1.0))
 {
 }
 
@@ -93,6 +94,8 @@ TimeStepper::computeStep()
   if (_current_dt < -TOLERANCE)
     mooseError("Negative time step detected :" + std::to_string(_current_dt) +
                " Investigate the TimeStepper to resolve this error");
+
+  _next_dt = _current_dt;
 }
 
 bool
@@ -169,6 +172,53 @@ TimeStepper::step()
 }
 
 void
+TimeStepper::computeNextStep(bool called_postSolve)
+{
+  if (called_postSolve)
+  {
+    _time = _time_old + _dt;
+    _t_step++;
+    Real timeold = _time_old;
+    _time_old = _time;
+    Real current_dt_old = _current_dt;
+    computeStep(); // update _current_dt
+    Real ct = _current_dt;
+    bool dummy = constrainStep(ct);
+    _next_dt = ct;
+    _current_dt = current_dt_old;
+    // Restore
+    _time_old = timeold;
+    _time = _time_old;
+    _t_step--;
+  }
+  else
+  {
+    Real timeold;
+    bool t2 = false;
+    if (_time > _time_old)
+      t2 = true;
+
+    if (t2) // This is called from MultiApp executioner with the endStep() as the last TimeStepper method in a previous time step. This is not hit for the initial time step even when called from MultiApp executioner
+    {
+      _t_step++;
+      timeold = _time_old;
+      _time_old = _time;
+    }
+    Real current_dt_old = _current_dt;
+    computeStep();
+    Real ct = _current_dt;
+    bool dummy = constrainStep(ct);
+    _next_dt = ct;
+    _current_dt = current_dt_old;
+    if (t2) // This is called from MultiApp executioner
+    {
+      _time_old = timeold;
+      _t_step--;
+    }
+  }
+}
+
+void
 TimeStepper::acceptStep()
 {
   // If there are sync times at or before the current time, delete them
@@ -188,6 +238,13 @@ unsigned int
 TimeStepper::numFailures() const
 {
   return _failure_count;
+}
+
+void
+TimeStepper::postSolve()
+{
+  if (converged())
+    computeNextStep(true);
 }
 
 bool

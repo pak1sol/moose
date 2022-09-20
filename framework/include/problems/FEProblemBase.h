@@ -1139,7 +1139,12 @@ public:
   /**
    * Find the smallest timestep over all MultiApps
    */
-  Real computeMultiAppsDT(ExecFlagType type);
+  Real computeMultiAppsDT_min(ExecFlagType type);
+
+  /**
+   * Find the maximum timestep over all MultiApps
+   */
+  Real computeMultiAppsDT_max(ExecFlagType type, bool isnext);
 
   /**
    * Add a Transfer to the problem.

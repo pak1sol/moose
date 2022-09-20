@@ -4761,7 +4761,9 @@ FEProblemBase::execMultiApps(ExecFlagType type, bool auto_advance)
 
   // Do anything that needs to be done to Apps before transfers
   for (const auto & multi_app : multi_apps)
+  {
     multi_app->preTransfer(_dt, _time);
+  }
 
   // Execute Transfers _to_ MultiApps
   execMultiAppTransfers(type, MultiAppTransfer::TO_MULTIAPP);
@@ -4910,16 +4912,29 @@ FEProblemBase::restoreMultiApps(ExecFlagType type, bool force)
 }
 
 Real
-FEProblemBase::computeMultiAppsDT(ExecFlagType type)
+FEProblemBase::computeMultiAppsDT_min(ExecFlagType type)
 {
   const auto & multi_apps = _transient_multi_apps[type].getActiveObjects();
 
   Real smallest_dt = std::numeric_limits<Real>::max();
 
   for (const auto & multi_app : multi_apps)
-    smallest_dt = std::min(smallest_dt, multi_app->computeDT());
+    smallest_dt = std::min(smallest_dt, multi_app->computeDT_min());
 
   return smallest_dt;
+}
+
+Real
+FEProblemBase::computeMultiAppsDT_max(ExecFlagType type, bool isnext)
+{
+  const auto & multi_apps = _transient_multi_apps[type].getActiveObjects();
+
+  Real maximum_dt = 0.;
+
+  for (const auto & multi_app : multi_apps)
+    maximum_dt = std::max(maximum_dt, multi_app->computeDT_max(isnext));
+
+  return maximum_dt;
 }
 
 void

@@ -10,6 +10,7 @@
 #pragma once
 
 #include "GeneralPostprocessor.h"
+#include "TimeStepper.h"
 
 class TimestepSize : public GeneralPostprocessor
 {
@@ -28,4 +29,6 @@ public:
 
 protected:
   FEProblemBase & _feproblem;
+  TimeStepper * _timestepper;
+  bool _isnextTstepper;
 };

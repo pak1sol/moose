@@ -105,7 +105,9 @@ PostprocessorValue
 ParsedPostprocessor::getValue()
 {
   for (unsigned int i = 0; i < _n_pp; i++)
+  {
     _func_params[i] = *_pp_values[i];
+  }
 
   if (_use_t)
     _func_params[_n_pp] = _t;

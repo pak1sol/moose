@@ -73,6 +73,7 @@
 [Outputs]
   csv = true
   exodus = false
+  file_base=adaptive_transient_main_out
 []
 
 [MultiApps]
