@@ -83,15 +83,12 @@ IterationAdaptiveDT::computeDT()
     if (_adaptive_timestepping)
     {
       // Don't allow it to grow this step, but shrink if needed
-      _allowToGrow = false;
-      computeAdaptiveDT(dt);
+      bool allowToGrow = false;
+      computeAdaptiveDT(dt, allowToGrow);
     }
   }
   else
-  {
-    _allowToGrow = true;
     dt = BaseAdaptiveDT::computeDT();
-  }
 
   return dt;
 }
@@ -141,7 +138,7 @@ IterationAdaptiveDT::computeAdaptiveDT(Real & dt, bool allowToGrow, bool allowTo
   const unsigned int shrink_l_its(_linear_iteration_ratio *
                                   (_optimal_iterations + _iteration_window));
 
-  if (_allowToGrow && (_nl_its < growth_nl_its && _l_its < growth_l_its))
+  if (allowToGrow && (_nl_its < growth_nl_its && _l_its < growth_l_its))
   {
     // Grow the timestep
     dt *= _growth_factor;
@@ -151,7 +148,7 @@ IterationAdaptiveDT::computeAdaptiveDT(Real & dt, bool allowToGrow, bool allowTo
                << " && lin its = " << _l_its << " < " << growth_l_its << " old dt: " << std::setw(9)
                << _dt_old << " new dt: " << std::setw(9) << dt << '\n';
   }
-  else if (_allowToShrink && (_nl_its > shrink_nl_its || _l_its > shrink_l_its))
+  else if (allowToShrink && (_nl_its > shrink_nl_its || _l_its > shrink_l_its))
   {
     // Shrink the timestep
     dt *= _cutback_factor;

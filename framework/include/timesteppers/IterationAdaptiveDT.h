@@ -35,7 +35,7 @@ protected:
   virtual Real computeDT() override;
   virtual bool converged() const override;
 
-  virtual void computeAdaptiveDT(Real & dt) override;
+  virtual void computeAdaptiveDT(Real & dt, bool allowToGrow = true, bool allowToShrink = true) override;
 
   /// Adapt the timestep to maintain this non-linear iteration count...
   int _optimal_iterations;
@@ -53,9 +53,5 @@ protected:
   bool _reject_large_step;
   /// Threshold used to detect whether we need to reject a step
   double _large_step_rejection_threshold;
-
-private:
-  bool _allowToGrow;
-  bool _allowToShrink = true;
 
 };

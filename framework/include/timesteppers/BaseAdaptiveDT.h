@@ -43,7 +43,7 @@ protected:
   virtual Real computeDT() override;
   virtual Real computeFailedDT() override;
 
-  virtual void computeAdaptiveDT(Real & dt) = 0;
+  virtual void computeAdaptiveDT(Real & dt, bool allowToGrow = true, bool allowToShrink = true) = 0;
   Real computeInterpolationDT();
   void limitDTByFunction(Real & limitedDT);
   void limitDTToPostprocessorValue(Real & limitedDT) const;

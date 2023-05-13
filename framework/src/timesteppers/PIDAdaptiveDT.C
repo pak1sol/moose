@@ -60,7 +60,7 @@ PIDAdaptiveDT::computeDT()
 }
 
 void
-PIDAdaptiveDT::computeAdaptiveDT(Real & dt)
+PIDAdaptiveDT::computeAdaptiveDT(Real & dt, bool allowToGrow, bool allowToShrink)
 {
   if (_R == std::numeric_limits<Real>::max())
   {

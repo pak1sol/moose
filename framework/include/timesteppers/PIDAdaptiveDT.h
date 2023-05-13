@@ -33,7 +33,7 @@ public:
 protected:
   virtual Real computeDT() override;
 
-  virtual void computeAdaptiveDT(Real & dt) override;
+  virtual void computeAdaptiveDT(Real & dt, bool allowToGrow = true, bool allowToShrink = true) override;
 
   Real localErrorEstimate();
 
